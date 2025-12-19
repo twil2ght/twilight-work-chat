@@ -1,0 +1,935 @@
+
+
+[
+  "---------------------------------------------------------",
+  "请遵照笔记《20251207统一度量衡》及笔记《算法准则》",
+  "---------------------------------------------------------",
+  {
+    "triggers": [
+      "boss say to [GG] : when taking out the trash , tie the trash bag tightly first"
+    ],
+    "result": [
+      "[P][GG] has to tie the trash bag tightly first | [GG] is taking out the trash"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when taking out the trash , tie the trash bag tightly first , then put it in the big trash bin outside the front gate"
+    ],
+    "result": [
+      "[P][GG] has to put the trash bag in the big trash bin outside the front gate | [GG] has tied the trash bag tightly | [GG] is taking out the trash"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when taking out the trash , tie the trash bag tightly first , then put it in the big trash bin outside the front gate , take out the trash every evening after dinner"
+    ],
+    "result": [
+      "[P][GG] has to take out the trash | today 's dinner is done"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : take out the trash every evening after"
+    ],
+    "result": [
+      "[P][GG] has to take out the trash | today 's dinner is done"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when setting the dining table for meals , put [a napkin] for each person , place the napkin on the left side of the plate"
+    ],
+    "result": [
+      "[F]boss say to [GG] : when setting the dining table for meals , put [a napkin] for each person , place the napkin on the left side of the plate"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when setting the dining table for meals , put a napkin for each person , place the napkin on the left side of the plate"
+    ],
+    "result": [
+      "[P][GG] has to place the napkin on the left side of the plate | [GG] is setting the dining table for meals"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when setting the dining table for meals , put [a napkin] for each person"
+    ],
+    "result": [
+      "[F]boss say to [GG] : when setting the dining table for meals , put [a napkin] for each person"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when setting the dining table for meals , put a napkin for each person"
+    ],
+    "result": [
+      "[P][GG] has to put a napkin for each person | [GG] is setting the dining table for meals"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when setting the dining table for meals , put a plate for each person"
+    ],
+    "result": [
+      "[P][GG] has to put a plate for each person | [GG] is setting the dining table for meals"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when setting the dining table for meals , put a fork for each person"
+    ],
+    "result": [
+      "[P][GG] has to put a fork for each person | [GG] is setting the dining table for meals"
+    ]
+  },
+  {
+    "triggers": [
+      "Boss say to [GG] : If a guest spills water on the sofa, quickly get a dry towel from the bathroom closet"
+    ],
+    "result": [
+      "[P][GG] has to get a dry towel from the bathroom closet quickly | a guest spills water on the sofa"
+    ]
+  },
+  {
+    "triggers": [
+      "Boss say to [GG] : If a guest spills water on the sofa, quickly get a dry towel from the bathroom closet and wipe the water"
+    ],
+    "result": [
+      "[P][GG] has to wipe the water on the sofa | a guest spills water on the sofa | [GG] has got a dry towel"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : you can take one hour off every afternoon from 2 PM to 3 PM to rest"
+    ],
+    "result": [
+      "[P][GG] can have a rest | [check  time] is later than 2 PM | [check time] is earlier than 3 PM"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : you can take one hour off every afternoon from 2 PM to 3 PM to rest , but don't leave the house during this time"
+    ],
+    "result": [
+      "[P][GG] has to stay at home | [GG] is having a rest | [check  time] is later than 2 PM | [check time] is earlier than 3 PM"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : you can take one hour off every afternoon from 2 PM to 3 PM to rest , but don't leave the house during this time , if i need you , i will call your name"
+    ],
+    "result": [
+      "[P]boss say : [GG] | boss needs [GG] to *do sth"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : if i need you , i will call your name"
+    ],
+    "result": [
+      "[P]boss say : [GG] | boss needs [GG]"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : If you feel sick and can’t work , tell me first"
+    ],
+    "result": [
+      "[P][GG] has to tell boss that she feels sick and can't work | [GG] feel sick | [GG] can't work"
+    ]
+  },
+  {
+    "triggers": [
+      "[GG] has to tell boss that [GG] feel sick and can't work"
+    ],
+    "result": [
+      "[GG] has to say to boss : i feel sick and can't work"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : If you feel sick and can’t work , tell me first , don’t hide it , and I will let you rest in your room"
+    ],
+    "result": [
+      "[P]boss allows [GG] to rest in [GG] 's room | [GG] has told boss that she feels sick and can't work"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : If you feel sick and can’t work , tell me first , don’t hide it , and I will let you rest in your room and ask someone to bring you medicine if needed"
+    ],
+    "result": [
+      "[P]boss will ask someone to bring medicine to [GG] | [GG] needs some medicine"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when making my morning coffee , use two spoons of ground coffee and heat the milk until it’s warm"
+    ],
+    "result": [
+      "[P][GG] has to use two spoons of ground coffee and heat the milk util it's warm | [GG] is making boss 's morning coffee"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when making my morning coffee , use two spoons of ground coffee and heat the milk until it’s warm , pour the coffee first"
+    ],
+    "result": [
+      "[P][GG] has to pour the two spoons of ground coffee | [step [GG] makes boss 's morning coffee : 0] is done",
+      "[P][step [GG] makes boss 's morning coffee : 1] is done | [GG] has poured the two spoons of ground coffee"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when making my morning coffee , use two spoons of ground coffee and heat the milk until it’s warm , pour the coffee first , then add the milk"
+    ],
+    "result": [
+      "[P][GG] has to add the milk | [step [GG] makes boss 's morning coffee : 1] is done",
+      "[P][step [GG] makes boss 's morning coffee : 2] is done | [GG] has added the milk"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : don’t touch the red box on my desk in the study , it has important documents"
+    ],
+    "result": [
+      "[P]the red box on boss 's desk in the study has important documents | [self-Q]for [GG] , why can't [GG] touch the red box on boss 's desk in the study",
+      "the red box on boss 's desk in the study has important documents"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : don’t touch the red box on my desk in the study , it has important documents , if you knock it over by accident , tell me immediately"
+    ],
+    "result": [
+      "[P][GG] has to tell boss that she has knocked the red box on boss 's desk by accident | [GG] has knocked the red box on boss 's desk by accident"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : every time you finish using the kitchen stove , wipe the surface with a damp cloth"
+    ],
+    "result": [
+      "[P][GG] has to wipe the surface of the kitchen stove with a damp cloth | [GG] has finished using the kitchen stove"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : every time you finish using the kitchen stove , wipe the surface with a damp cloth , make sure there is no oil or food residue left"
+    ],
+    "result": [
+      "[P][GG] has to make sure there is no oil or food residue left on the surface of the kitchen stove | [GG] has wiped the surface of the kitchen stove with a damp cloth"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when guests bring gifts , take them with both hands"
+    ],
+    "result": [
+      "[P][GG] has to take the gifts given by guests with both hands | guests has brought gifts to [GG]"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when guests bring gifts , take them with both hands and say : \" Thank you so much \""
+    ],
+    "result": [
+      "[P][GG] has to say to guests who have brought gifts to [GG] : thank you so much | [GG] has taken the gifts given by guests with both hands"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when guests bring gifts , take them with both hands and say : \" Thank you so much \" , then put the gifts on the shelf near the front door"
+    ],
+    "result": [
+      "[P][GG] has to put the gifts given by guests on the shelf near the front door | [GG] has said to guests who have brought gifts to [GG] : thank you so much"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : If the water in the kettle is less than half , fill it with tap water"
+    ],
+    "result": [
+      "[P][GG] has to fill the kettle with tap water | the water in the kettle is less than half"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : If the water in the kettle is less than half , fill it with tap water and boil it"
+    ],
+    "result": [
+      "[P][GG] has to boil the kettle | [GG] has filled the kettle with tap water"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : keep the kettle full so there’s hot water anytime"
+    ],
+    "result": [
+      "if [GG] keeps the kettle full with water , so there is hot water in the kettle anytime"
+    ]
+  },
+  {
+    "triggers": [
+      "if [GG] keeps the kettle full with water , so there is hot water in the kettle anytime"
+    ],
+    "result": [
+      "[P]there is hot water in the kettle | [GG] has kept the kettle full with water"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : your bedtime is 10 PM every night , turn off your room light then"
+    ],
+    "result": [
+      "[P][GG] has to turn off [GG] 's room light | it is [GG] 's bedtime",
+      "[P] it is [GG] 's bedtime | it is 10 PM",
+      "[[GG] 's bed time : 10 PM every night]"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : your bedtime is 10 PM every night , turn off your room light then , and don’t make noise after that"
+    ],
+    "result": [
+      "[P][GG] shouldn't make noise | [GG] has turned off [GG] 's room light | it is [GG] 's bedtime"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : your bedtime is 10 PM every night , turn off your room light then , and don’t make noise after that , in case you wake me"
+    ],
+    "result": [
+      "[P]in case [GG] wakes boss | [self-Q]why [GG] shouldn't make noise [conditions : [GG] has turned off [GG] 's room light;it is [GG] 's bed time]"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : why shouldn't you make noise when it is your bedtime"
+    ],
+    "result": [
+      "[self-Q]why [GG] shouldn't make noise [conditions : [GG] has turned off [GG] 's room light;it is [GG] 's bed time]"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when folding clean clothes , put boss’s shirts in the top drawer of the bedroom wardrobe"
+    ],
+    "result": [
+      "[P][GG] has to put boss 's shirts in the top drawer of the bedroom wardrobe | [GG] is folding clean clothes"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when folding clean clothes , put boss’s shirts in the top drawer of the bedroom wardrobe , pants in the middle"
+    ],
+    "result": [
+      "[P][GG] has to put boss 's pants in the middle drawer of the bedroom wardrobe | [GG] is folding clean clothes"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when folding clean clothes , put boss’s shirts in the top drawer of the bedroom wardrobe , pants in the middle , and socks in the small drawer on the right"
+    ],
+    "result": [
+      "[P][GG] has to put boss 's socks in the small drawer of the bedroom wardrobe | [GG] is folding clean clothes"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : If a guest asks for a blanket , get the gray ones from the cabinet in the guest room"
+    ],
+    "result": [
+      "[P][GG] has to get the gray blankets from the cabinet in the guest room | the guest asks for a blanket"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : If a guest asks for a blanket , get the gray ones from the cabinet in the guest room , don’t give the white blankets"
+    ],
+    "result": [
+      "[P][GG] shouldn't give the white blankets to the guest | the guest asks for a blanket"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : If a guest asks for a blanket , get the gray ones from the cabinet in the guest room , don’t give the white blankets , those are for winter"
+    ],
+    "result": [
+      "boss say to [GG] : if it is winter , you can give the white blankets from the cabinet in the guest room if a guest asks for a blanket",
+      "[P]the white blankets are for winter | [self-Q]why shouldn't [GG] give the white blankets to the guest | it is not winter now"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : If a guest asks for a blanket , get the gray ones from the cabinet in the guest room , don’t give the white blankets , those are for winter"
+    ],
+    "result": [
+      "boss say to [GG] : if it is winter , you can give the white blankets from the cabinet in the guest room if a guest asks for a blanket",
+      "[P]the white blankets are for winter | [self-Q]why shouldn't [GG] give the white blankets to the guest | it is not winter now"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : every Friday morning , change the bed sheets in the guest room"
+    ],
+    "result": [
+      "[P][GG] has to change the bed sheets in the guest room | it is Friday morning"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : every Friday morning , change the bed sheets in the guest room , put the dirty ones in the laundry basket"
+    ],
+    "result": [
+      "[P][GG] has to put the dirty bed sheets in the laundry basket | [GG] has changed the bed sheets in the guest room"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : every Friday morning , change the bed sheets in the guest room , put the dirty ones in the laundry basket and the clean ones from the linen closet"
+    ],
+    "result": [
+      "[P][GG] has to put the clean bed sheets in the linen closet | [GG] has changed the bed sheets in the guest room"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] :  don’t feed the cat more than twice a day"
+    ],
+    "result": [
+      "[P][GG] can feed the cat | [count : [GG] has fed the cat] <= 2"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] :  don’t feed the cat more than twice a day , once in the morning , once in the evening"
+    ],
+    "result": [
+      "[P][GG] has to feed the cat | it is morning now",
+      "[P][GG] has to feed the cat | it is evening now"
+    ]
+  },
+  {
+    "triggers": [
+      "[GG] has fed the cat in the morning"
+    ],
+    "result": [
+      "[count : [GG] has fed the cat] ++"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] :  don’t feed the cat more than twice a day , once in the morning , once in the evening , with a small bowl of cat food each time"
+    ],
+    "result": [
+      "[P][GG] has to fed the cat with a small bowl of cat food | [GG] is feeding the cat"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when I come back home from work , take my coat"
+    ],
+    "result": [
+      "[P][GG] has to take boss 's coat | boss has come back home from work"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when I come back home from work , take my coat and hang it on the coat rack by the front door"
+    ],
+    "result": [
+      "[P][GG] has to hang boss 's coat on the coat rack by the front door | [GG] has taken boss 's coat | boss has come back home from work"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : when I come back home from work , take my coat and hang it on the coat rack by the front door , then bring me a glass of water"
+    ],
+    "result": [
+      "[P][GG] has to bring boss a glass of water | [GG] has hung boss 's coat on the coat rack by the front door | boss has come back home from work"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : If the window in the living room is dirty , wipe it with a glass cleaner"
+    ],
+    "result": [
+      "[P][GG] has to wipe the window in the living room with a glass cleaner | the window in the living room is dirty"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : If the window in the living room is dirty , wipe it with [0x01] , wipe the inside first"
+    ],
+    "result": [
+      "[P][GG] has to wipe the inside of the window in the living room | [GG] is wiping the window in the living room with [0x01]"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : If the window in the living room is dirty , wipe it with [0x01] , wipe the inside first , then the outside"
+    ],
+    "result": [
+      "[P][GG] has to wipe the outside of the window in the living room | [GG] has wiped the inside of the window in the living room"
+    ]
+  },
+  {
+    "DONE": "原句已经添加，等待添加成品************************************************************************************************",
+    "triggers": [
+      "boss say to [GG] : If the window in the living room is dirty , wipe it with [0x01] , wipe the inside first , then the outside , be careful when reaching outside"
+    ],
+    "result": [
+      "[P] [GG] has to be careful when reaching the outside of the living room | [GG] is wiping the outside of the window in the living room"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : You can read the books on the lower shelf of the living room bookshelf"
+    ],
+    "result": [
+      "[GG] can read the books on the lower shelf of the living room bookshelf"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : You can read the books on the lower shelf of the living room bookshelf , don’t touch the books on the upper shelf"
+    ],
+    "result": [
+      "[GG] shouldn't the books on the upper shelf of the living room bookshelf"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : You can read the books on the lower shelf of the living room bookshelf , don’t touch the books on the upper shelf , those are my collections"
+    ],
+    "result": [
+      "[P] the books on the upper shelf are boss 's collections | [self-Q]why shouldn't GG touch the books on the upper shelf of the living room bookshelf"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : When preparing fruit for guests , wash them first"
+    ],
+    "result": [
+      "[P][GG] has to wash the fruit for guests | [GG] is preparing fruit for guests"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : When preparing fruit for guests , wash them first , peel [0x01]"
+    ],
+    "result": [
+      "[P][GG] has to peel [0x01] | [GG] has washed the fruit for guests | [GG] is preparing fruit for guests"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : When preparing fruit for guests , wash them first , peel [0x01], cut oranges into slices"
+    ],
+    "result": [
+      "[P][GG] has to cut oranges into slices | [GG] has peeled apples and pears | [GG] is preparing fruit for guests"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : When preparing fruit for guests , wash them first , peel [0x01], cut oranges into slices , and put them on a plate with a fork"
+    ],
+    "result": [
+      "[P][GG] has to put the fruit for guests on a plate with a fork | [GG] has cut oranges into slices | [GG] is preparing fruit for guests"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] :  If the smoke alarm in the kitchen rings , first turn off the stove"
+    ],
+    "result": [
+      "[P][GG] has to turn off the stove in the kitchen | the smoke alarm in the kitchen rings"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] :  If the smoke alarm in the kitchen rings , first turn off the stove , then open the window"
+    ],
+    "result": [
+      "[P][GG] has to open the window in the kitchen | [GG] has turned off the stove | the smoke alarm in the kitchen rings"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] :  If the smoke alarm in the kitchen rings , first turn off the stove , then open the window , don’t panic"
+    ],
+    "result": [
+      "boss say to [GG] : don't panic when the smoke alarm in the rings"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] :  If the smoke alarm in the kitchen rings , first turn off the stove , then open the window , don’t panic , and tell me if it doesn’t stop"
+    ],
+    "result": [
+      "[P][GG] has tell boss that the smoke alarm in the kitchen keeps ringing | [GG] has opened the window in the kitchen | [GG] has turned off the stove in the kitchen | the smoke alarm in the kitchen is ringing"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : Every month on the first , take the mail from the mailbox at the front gate"
+    ],
+    "result": [
+      "[P][GG] has to take the mail from the mailbox at the front gate | it is the first day of the current month"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : Every month on the first , take the mail from the mailbox at the front gate , sort it"
+    ],
+    "result": [
+      "[P][GG] has to sort the mail from the mailbox at the the front gate | [GG] has taken the mail from the mailbox at the front gate"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : Every month on the first , take the mail from the mailbox at the front gate , sort it , put bills on my desk"
+    ],
+    "result": [
+      "[P][GG] has to put bills on boss 's desk | [GG] has sorted the mail from the mailbox at the front gate"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : Every month on the first , take the mail from the mailbox at the front gate , sort it , put bills on my desk , letters in the blue folder"
+    ],
+    "result": [
+      "[P][GG] has to put letters in the blue folder | [GG] has sorted the mail from the mailbox at the front gate"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : Every month on the first , take the mail from the mailbox at the front gate , sort it , put bills on my desk , letters in the blue folder , and ads in the trash"
+    ],
+    "result": [
+      "[P][GG] has to put ads in the trash | [GG] has sorted the mail from the mailbox at the front gate"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : When talking to [0x01] , stand straight"
+    ],
+    "result": [
+      "[P] [GG] has to stand straight | [GG] is talking to [0x01]"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : When talking to [0x01] , look at the person ’s eyes gently"
+    ],
+    "result": [
+      "[P] [GG] has to look at [0x01] 's eyes gently | [GG] is talking to [0x01]"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : When talking to [0x01] , don’t interrupt when someone is speaking"
+    ],
+    "result": [
+      "[P] [GG] shouldn't interrupt [0x01] | [GG] is talking to [0x01] | [0x01] is speaking"
+    ]
+  },
+  {
+    "done": "DONE",
+    "triggers": [
+      "boss say to [GG] : When talking to me or guests , stand straight , look at the person ’s eyes gently , and don’t interrupt when someone is speaking"
+    ],
+    "result": [
+      "boss say to [GG] : When talking to [0x01] , [0x02]"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] :  If you can’t find something I asked for like my keys , don’t guess"
+    ],
+    "result": [
+      "[P][GG] shouldn't guess where the item boss asked for is | [GG] can't find the item boss asked for"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] :  If you can’t find something I asked for like my keys , check the usual places first bedside [0x01]"
+    ],
+    "result": [
+      "[P][GG] has to check the usual place | [GG] can't find the item boss asked for"
+    ]
+  },
+  {
+    "done": "DONE",
+    "triggers": [
+      "boss say to [GG] :  If you can’t find something I asked for like my keys , don’t guess , check the usual places first , bedside table , coat pocket , study desk , then ask me"
+    ],
+    "result": [
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : When I go out and leave you at home , lock the front door after me"
+    ],
+    "result": [
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : When I [flex0X01] , lock the front door after me , don’t open it for anyone except me"
+    ],
+    "result": [
+    ]
+  },
+  {
+    "done": "DONE",
+    "triggers": [
+      "boss say to [GG] : When I go out and leave you at home , lock the front door after me , don’t open it for anyone except me even if they say they’re my friend"
+    ],
+    "result": [
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : When preparing boss 's lunch , put the main dish on the left side of the plate"
+    ],
+    "result": [
+      "[P][GG] has to put the main dish of boss 's lunch on the left side of the plate | [GG] is preparing boss 's lunch"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : When preparing boss 's lunch , put the soup in the bowl next to the plate"
+    ],
+    "result": [
+      "[P][GG] has to put the soup in the bowl next to the plate | [GG] is preparing boss 's lunch"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : When preparing boss 's lunch , put the side dish on the right side of the plate"
+    ],
+    "result": [
+      "[P][GG] has to put the side dish of boss 's lunch on the right side of the plate | [GG] is preparing boss 's lunch"
+    ]
+  },
+  {
+    "done": "done",
+    "triggers": [
+      "boss say to [GG] : When preparing boss 's lunch , put the main dish on the left side of the plate , the side dish on the right and the soup in the bowl next to the plate"
+    ],
+    "result": [
+      "[P][GG] has to put [0x01] of boss 's lunch [^0x01]",
+      "[P][GG] has to put [0x02]"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : Don't touch the vintage clock on the mantelpiece in the living room"
+    ],
+    "result": [
+      "[GG] shouldn't touch the vintage clock on the mantelpiece in the living room"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : Don't touch the vintage clock on the mantelpiece in the living room , it's a family heirloom"
+    ],
+    "result": [
+      "[P]the vintage clock on the mantelpiece in the living room is a family heirloom | [self-Q]why shouldn't [GG] touch the vintage clock on the mantelpiece in the living room"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : Don't touch the vintage clock on the mantelpiece in the living room , tell me if it stops working"
+    ],
+    "result": [
+      "[P][GG] has to tell the boss the vintage clock on the mantelpiece in the living room stops working | the vintage clock on the mantelpiece in the living room stops working"
+    ]
+  },
+  {
+    "done": "done",
+    "triggers": [
+      "boss say to [GG] : Don't touch the vintage clock on the mantelpiece in the living room , it's a family heirloom and tell me if it stops working"
+    ],
+    "result": [
+      "[0x02]"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : When walking the dog every evening , take the red leash"
+    ],
+    "result": [
+      "[P][GG] has to take the red leash | [GG] is walking the dog | it is evening"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : When walking the dog every evening , bring a plastic bag to pick up his waste"
+    ],
+    "result": [
+      "[P][GG] has to bring a plastic bag to pick up his waste | [GG] is walking the dog | it is evening"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : When walking the dog every evening , don't let him run into the neighbor 's yard"
+    ],
+    "result": [
+      "[P][GG] shouldn't let the dog run into the neighbour 's yard | [GG] is walking the dog | it is evening"
+    ]
+  },
+  {
+    "done": "done",
+    "triggers": [
+      "boss say to [GG] : When walking the dog every evening , take the red leash , bring a plastic bag to pick up his waste , and don't let him run into the neighbor 's yard"
+    ],
+    "result": [
+      "[0x02]"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : If the Wi-Fi stops working , press the reset button on the router in the study"
+    ],
+    "result": [
+      "[P][GG] has to press the reset button on the router in the study | the Wi-Fi stops working"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : If the Wi-Fi stops working , press the reset button on the router in the study , wait for five minutes"
+    ],
+    "result": [
+      "[P][GG] has to wait for five minutes | [GG] has pressed the reset button on the router in the study | the Wi-Fi stops working"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : If the Wi-Fi stops working , press the reset button on the router in the study , wait for five minutes and check if it works again"
+    ],
+    "result": [
+      "[P][GG] has to check the Wi-Fi if the Wi-Fi works again | [GG] has waited for five minutes | the Wi-Fi stops working"
+    ]
+  },
+  {
+    "done": "done",
+    "triggers": [
+      "boss say to [GG] : If the Wi-Fi stops working , press the reset button on the router in the study , wait for five minutes and check if it works again"
+    ],
+    "result": [
+      "[stepper]"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : Every Thursday afternoon , change the towels in all bathrooms"
+    ],
+    "result": [
+      "[P][GG] has to change the towels in all bathrooms | it is Thursday afternoon"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : Every Thursday afternoon , change the towels in all bathrooms , put the clean ones from the linen closet"
+    ],
+    "result": [
+      "[P][GG] has to put the clean ones from the linen closet | [GG] has changed the towels in all bathrooms"
+    ]
+  },
+  {
+    "triggers": [
+      "boss say to [GG] : Every Thursday afternoon , change the towels in all bathrooms , put the dirty ones in the laundry basket"
+    ],
+    "result": [
+      "[P][GG] has to put the dirty ones in the laundry basket | [GG] has changed the towels in all bathrooms"
+    ]
+  },
+  {
+    "done": "done",
+    "triggers": [
+      "boss say to [GG] : Every Thursday afternoon , change the towels in all bathrooms , put the dirty ones in the laundry basket and the clean ones from the linen closet"
+    ],
+    "result": [
+      "[0x02] [stepper]"
+    ]
+  },
+  {
+    "done": "done",
+    "triggers": [
+      "boss say to [GG] : when answering the phone at home , first say : \" hello , this is [GG] 's house \" , if the caller asks for me , say : \" please wait a minute \" and call me"
+    ],
+    "result": [
+      "[stepper0x02] [stepper0x03]"
+    ]
+  },
+  {
+    "done": "done",
+    "result": [
+      "[P][GG] has to say to boss : \"I am here\" | boss is calling [GG] 's name"
+    ],
+    "triggers": [
+      "Boss say to [GG] : When I call your name , you have to say: \"I am here\" to respond to me"
+    ]
+  },
+  {
+    "node": "I think it’d be nice if you place flower deliveries in the ceramic vase on the dining table, trim the stems a little, and add fresh water each day"
+  },
+  {
+    "node": ""
+  },
+  {
+    "node": ""
+  },
+  {
+    "node": ""
+  },
+  {
+    "node": ""
+  },
+  {
+    "node": ""
+  },
+  {
+    "node": ""
+  },
+  {
+    "node": ""
+  },
+  {
+    "node": ""
+  },
+  {
+    "node": ""
+  },
+  {
+    "node": ""
+  },
+  {
+    "node": ""
+  },
+  {
+    "node": ""
+  },
+  {
+    "node": ""
+  },
+  {
+    "node": ""
+  },
+  {
+    "node": ""
+  },
+  {
+    "node": ""
+  },
+  {
+    "node": ""
+  }
+]
+
+
