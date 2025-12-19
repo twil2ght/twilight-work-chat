@@ -1,6 +1,6 @@
-import {ContainerConfig, ContainerType} from "../types";
+import {CType, Zip_C} from "../types";
 import {Register, Update} from "../utils";
-import {SPLIT_END_SIGN_CONTAINER} from "../Node/config";
+import {SIGN_C_END} from "@/src/constants"
 
 
 export class Container{
@@ -9,7 +9,7 @@ export class Container{
 
   constructor(private readonly id:string,
               private readonly name:string,
-              private readonly type:ContainerType,
+              private readonly type:CType,
               private  content:string){}
 
   async registerTo(pool:Container[]){
@@ -20,15 +20,15 @@ export class Container{
      await Update<Container>(this,pool,transform);
    }
   }
-  zip():ContainerConfig{
-    return {key:this.id,content:this.content,type:this.type,name:this.name};
+  zip():Zip_C{
+    return {k:this.id,val:this.content,type:this.type,name:this.name};
   }
 
   /**
    * @example [0x01] : Hello World //
    */
   executable():boolean{
-    return this.content.endsWith(SPLIT_END_SIGN_CONTAINER)
+    return this.content.endsWith(SIGN_C_END)
   }
 
 }

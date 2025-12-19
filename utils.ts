@@ -1,22 +1,22 @@
-import {ContainerType, Converter, Transformer} from "@/src/types";
-import {containerVariantsNormal} from "@/src/constants";
+import {CType} from "@/src/types";
+import {CReg} from "@/src/constants";
 import {Relation} from "./Relation";
 import {Node} from "@/src/Node";
 
-export function isParallelSymbol(nodeVal: string): ContainerType | undefined {
-  for (const variant of containerVariantsNormal) {
-    if (variant.rule.test(nodeVal)) {
-      return variant.containerType
+export function isParalHead(nv: string): CType | undefined {
+  for (const variant of CReg) {
+    if (variant.rule.test(nv)) {
+      return variant.cType
     }
   }
   return;
 }
 export async function Register<T extends {
   key: string | number,
-}>(item: T, itemPool: T[], onSuccessCallback?: Converter): Promise<boolean> {
+}>(item: T, itemPool: T[], callback?: any): Promise<boolean> {
   if (!itemPool.some(e => e.key === item.key)) {
     itemPool.push(item);
-    if (onSuccessCallback) await onSuccessCallback(item);
+    if (callback) await callback(item);
     return true;
   }
   console.log("register failed: Element is already existed: ",item);
@@ -25,10 +25,10 @@ export async function Register<T extends {
 
 export async function Update<T extends {
   key: string | number,
-}>(item: T, itemPool: T[], transform: Transformer): Promise<boolean> {
-  let existedItem: T | undefined = itemPool.find(e => e.key === item.key)
-  if (existedItem) {
-    transform(existedItem, item)
+}>(item: T, itemPool: T[], F: any): Promise<boolean> {
+  let exist: T | undefined = itemPool.find(e => e.key === item.key)
+  if (exist) {
+    F(exist, item)
     console.log("Update successful", item);
     return true;
   }
@@ -37,7 +37,7 @@ export async function Update<T extends {
 }
 
 async function showNode(n:Node){
-  console.log(`ID:${n.zip().key} | Val:${n.zip().content} | State:${n.zip().isActive}`)
+  console.log(`ID:${n.zip().k} | Val:${n.zip().val} | State:${n.zip().state}`)
 }
 
 
@@ -54,10 +54,10 @@ export async function showcase():Promise<void>{
    *    containers:
    */
   for (const e of Relation.pool){
-    const key=e.zip().key
-    const t=e.zip().triggers
-    const r=e.zip().results
-    const c=e.zip().containers
+    const key=e.zip().k
+    const t=e.zip().t
+    const r=e.zip().r
+    const c=e.zip().c
     console.log(`Relation(${key}):`)
     console.log(`\tT:`)
     t.forEach(e=>showNode(e))
@@ -65,7 +65,7 @@ export async function showcase():Promise<void>{
     r.forEach(e=>showNode(e))
     console.log(`\tC:`)
     c.forEach(e=>{
-      console.log(`ID:${e.zip().key} | Val:${e.zip().content}`)
+      console.log(`ID:${e.zip().k} | Val:${e.zip().val}`)
     })
   }
 }

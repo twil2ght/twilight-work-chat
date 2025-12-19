@@ -1,18 +1,23 @@
-import {ContainerVariant} from "@/src/types";
+import {CType} from "@/src/types";
 
-export const ParallelReg = {
+interface CVarirant {
+  rule: RegExp
+  cType: CType;
+}
+
+export const Regs = {
   parallel: /^\[(0x\d+)]$/,
   node: /^\[(\d+)]$/
 }
 
-export const NODE_TYPE = {
-  TRIGGER: `trigger`,
-  RESULT: `result`,
-} as const;
-
-export const containerVariantsNormal: ContainerVariant[] = [
+export const CReg: CVarirant[] = [
   {
-    rule: ParallelReg.parallel,
-    containerType: "parallel",
+    rule: Regs.parallel,
+    cType: "parallel",
   }
 ]
+export const SIGN_P = "|"
+export const SIGN_CHECK = "&"
+export const SIGN_C = "/"
+export const SIGN_C_END = "//"
+

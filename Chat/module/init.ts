@@ -4,9 +4,9 @@ import {Relation} from "../../Relation";
                 trigger:[check] [next] | boss ;
                 result:boss to [GG] : `
 
-export async function chatInit(){
-  const metaRelation= new Relation(1,[],[],[])
-  await metaRelation.register()
+export async function init(){
+  const metaR= new Relation(1,[],[],[])
+  await metaR.register()
 }
 
 

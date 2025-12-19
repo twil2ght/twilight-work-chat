@@ -1,9 +1,5 @@
-import {NodeDBHandler} from "./nodeDBHandler/NodeHandler";
-import {RelationDBHandler} from "./relationDBHandler/RelationHandler";
-import {ProjectionDBHandler} from "./projectionDBHandler/ProjectionDBHandler";
-import {dbConfig} from "./DBconfig";
-import {Pool} from "pg";
+import {IdentityDBHandler, NodeDBHandler, ProjectionDBHandler, RelationDBHandler} from './handler'
 
-const pool = new Pool(dbConfig);
-export const [nodeDBHandler,relationDBHandler,projectionDBHandler] = [new NodeDBHandler(pool),new RelationDBHandler(pool),new ProjectionDBHandler(pool)];
+export const [handlerN, handlerR, handlerP,handlerI] =
+    [new NodeDBHandler(),new RelationDBHandler(),new ProjectionDBHandler(),new IdentityDBHandler()];
 

@@ -1,4 +1,5 @@
 import {Node} from './node'
+
 const testData_check=`[check] [GG] | [GG]`
 const testData_P=`[P] [GG] has to wash the dishes | the dinner is over | the guests have left`
 const nodeIns1 = new Node(1,testData_check)

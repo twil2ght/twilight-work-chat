@@ -1,8 +1,4 @@
-import {
-  ConvertToArrayParam,
-  ExtractByCondition,
-  PromiseReturnType
-} from "./types";
+import {ConvertToArrayParam, ExtractByCondition, PromiseReturnType} from "./types";
 
 export function applyBatch<Index extends number>(dependentArgIdx?: Index) {
   return function<F extends (...args: any[]) => Promise<any>>(Fn: F,){

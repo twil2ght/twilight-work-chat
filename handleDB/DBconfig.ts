@@ -1,11 +1,18 @@
-const dbConfigTest = {
+interface DBConfig{
+  user: string,
+  host: string,
+  database: string,
+  password: string,
+  port: number,
+}
+const test = {
   user: "postgres",
   host: "localhost",
   database: "postgres",
   password: "gg",
   port: 5432,
 };
-const dbConfigMain = {
+const main = {
   user: "twilight",
   host: "localhost",
   database: "twilight",
@@ -15,4 +22,4 @@ const dbConfigMain = {
 
 const isTest = true
 
-export const dbConfig = isTest ? dbConfigTest : dbConfigMain
+export const dbConfig:DBConfig = isTest ? test : main

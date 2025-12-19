@@ -1,17 +1,5 @@
 export {handleCreate} from './handleCreate'
 
-const testData= {
-  triggers: [
-    `boss say to [GG] : when taking out the trash , [0x01](
-    tie the trash bag tightly first / 
-    then put it in the big trash bin outside the front gate / 
-    take out the trash every evening after dinner /)`
-  ],
-  result: [
-    "[P][GG] has to take out the trash | today 's dinner is done"
-  ]
-}
-
 const testData2 = `
 boss: when I call your name, you have to make a response to me
 *: [P] [GG] has to make response to boss | boss has called [GG] 's name
@@ -29,3 +17,37 @@ boss : if I say : [GG] , it means I have spoken out your name .
 GG: how do I make a response to you ?
 boss: you can say : I am here , sir . to make a response to me
 `
+
+const md=`if someone says: “Excuse me, where is the bathroom?”,
+ then you have to smile and say: “It’s at the end of the hallway on the left”, and lead them there if they look confused`
+
+const correspondent_mt=`boss to [GG] : if someone says [0x01] , then you have to say [0x02]`;
+`DESIGN:
+      [GG] has to say [0x02] | someone has said [0x01]
+`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const md2=`if our cat is hungry , you have to feed him
+            our cat 's name is glow , and it means glow is our cat
+            [GG] has to feed our cat | our cat is hungry
+            who is our cat
+            how does [GG] feed`
+const mw=`if glow is hungry , you have to feed him | glow is our cat`
+const td2=`glow is hungry
+->[check] glow & [GG] 's  cat`

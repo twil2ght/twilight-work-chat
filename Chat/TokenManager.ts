@@ -50,7 +50,7 @@ export const next_tokens = {
 };
 
 // 核心修复：给每个方法绑定this到TokenManager
-export const internalTokenApi = {
+export const TokenApi = {
   shift: TokenManager.shift.bind(TokenManager),
   getLength: TokenManager.getLength.bind(TokenManager), // 关键！绑定this
   getHistory: TokenManager.getHistory.bind(TokenManager)

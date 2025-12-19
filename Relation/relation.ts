@@ -1,9 +1,8 @@
-import {ContainerConfig, Converter, RelationConfig} from "../types";
+import { Zip_R} from "../types";
 import {Register} from "../utils";
 import {Node} from "../Node"
-import {Container} from "../container";
-import {nodeDBHandler, projectionDBHandler} from "../handleDB";
-
+import {Container} from "../Container";
+import {handlerN, handlerP} from "../handleDB";
 
 
 export class Relation {
@@ -15,16 +14,16 @@ export class Relation {
     this.key = key
   }
 
-  async register(pn?:Node) {
-    await Register<Relation>(this, Relation.pool, async()=>{await this.registerCallback(pn)})
+  async register(prevN?:Node) {
+    await Register<Relation>(this, Relation.pool, async()=>{await this.registerCallBack(prevN)})
   }
 
-  zip(): RelationConfig {
-    return {key: this.key, triggers: this.trigger, results: this.result, containers: this.container}
+  zip(): Zip_R {
+    return {k: this.key, t: this.trigger, r: this.result, c: this.container}
   }
 
-  isAllTriggersReady(): boolean {
-    return this.trigger.every(trigger => trigger.executable())
+  satisfied(): boolean {
+    return this.trigger.every(t => t.executable())
   }
 
   isValid(): boolean {
@@ -41,29 +40,24 @@ export class Relation {
   unregister() {
 
     if (!this.isValid()) return;
-    if (!this.isAllTriggersReady()) return;
+    if (!this.satisfied()) return;
     Relation.pool=Relation.pool.filter(rel => rel.key !== this.key)
-    return {result: this.result,container: this.container}
+    return {rs: this.result,cs: this.container}
   }
 
-  private registerCallback: Converter = async (pn?:Node) => {
+  private registerCallBack = async (prevN?:Node) => {
     if (this.key !== undefined) {
-      const projections = await projectionDBHandler.queryProjectionByRelationId(this.key)
-      const config = await Promise.all(projections.map(async (projection) => {
-        return {val: (await nodeDBHandler.findNodeById(projection.node_id))!, type: projection.nodetype}
+      const ps = await handlerP.findByR(this.key)
+      const config = await Promise.all(ps.map(async (p) => {
+        return {row_N: (await handlerN.find(p.node_id))!, type: p.type}
       }))
       await Promise.all(config.map(async e => {
-        if(e.val.id===pn?.key){
-          await pn.registerTo(this[e.type]);
+        if(e.row_N.id===prevN?.key){
+          await prevN.registerTo(this[e.type]);
         }else {
-          const node = new Node(e.val.id, e.val.content);
+          const node = new Node(e.row_N.id, e.row_N.val);
           await node.register();
           await node.registerTo(this[e.type]);
-          const res: ContainerConfig | undefined = node.extractParallel()
-          if (res !== undefined) {
-            const parallel = new Container(res.key, res.name, res.type, res.content)
-            await parallel.registerTo(this.container)
-          }
         }
       }))
     }

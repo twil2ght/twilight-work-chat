@@ -1,26 +1,25 @@
-import { chatInit } from "./module/init";
-import { chatExToken_In } from "./module/ex_token_in";
-import { Node } from "../Node";
-import { Container } from "../container";
-import { unregisterRelation } from "./module/unregisterRelation";
-import { register_legacy } from "./module/register_legacy";
-// 导入独立的Token模块（核心修改）
-import { next_tokens, internalTokenApi } from "./TokenManager";
+import {init} from "./module/init";
+import {tryNs} from "./module/tryNodes";
+import {Node} from "../Node";
+import {Container} from "../Container";
+import {tryRs} from "./module/tryRs";
+import {registerLegacy} from "./module/register_legacy";
+import {TokenApi, next_tokens} from "./TokenManager";
 import {showcase} from "../utils";
 
 // --- 枚举定义 ---
 const enum Event {
   INIT,
-  EXTERNAL_WORD_GET_IN,
-  REGISTER_REV_LEGACY,
-  UNREGISTER_RELATION,
+  HasToken,
+  REGISTER_LEGACY,
+  TRY_REL,
   NOTHING,
 }
 
 // --- 接口定义 ---
 export interface Legacy {
-  result: Node[];
-  container: Container[];
+  rs: Node[];
+  cs: Container[];
 }
 
 interface Options {
@@ -28,41 +27,41 @@ interface Options {
 }
 
 // --- 核心聊天逻辑 ---
-const chat = async (currentState: Event, opt: Options): Promise<{ nextEvent: Event; newOptions: Options }> => {
-  let nextState: Event;
+const chat = async (cur: Event, opt: Options): Promise<{ next: Event; newOptions: Options }> => {
+  let next: Event;
   let newOptions = opt;
 
-  switch (currentState) {
+  switch (cur) {
     case Event.INIT: {
       console.log("[mode]:init")
-      await chatInit();
-      nextState = Event.UNREGISTER_RELATION;
+      await init();
+      next = Event.TRY_REL;
       await showcase()
       console.log(`===========================================`)
       break;
     }
 
-    case Event.EXTERNAL_WORD_GET_IN: {
+    case Event.HasToken: {
       console.log("[mode]:ex_word_get_in")
-      await chatExToken_In();
-      nextState = Event.UNREGISTER_RELATION;
+      await tryNs();
+      next = Event.TRY_REL;
       await showcase()
       console.log(`===========================================`)
       break;
     }
 
-    case Event.UNREGISTER_RELATION: {
+    case Event.TRY_REL: {
       console.log("[mode]:unregister")
-      const legacy = unregisterRelation();
+      const legacy = tryRs();
       if (legacy.length > 0) {
         newOptions = { ...opt, legacy };
-        nextState = Event.REGISTER_REV_LEGACY;
+        next = Event.REGISTER_LEGACY;
       } else {
-        if (internalTokenApi.getLength() > 0) {
-          internalTokenApi.shift(); // 消费Token
-          nextState = Event.EXTERNAL_WORD_GET_IN;
+        if (TokenApi.getLength() > 0) {
+          TokenApi.shift(); // 消费Token
+          next = Event.HasToken;
         } else {
-          nextState = Event.NOTHING;
+          next = Event.NOTHING;
         }
       }
       await showcase()
@@ -70,10 +69,10 @@ const chat = async (currentState: Event, opt: Options): Promise<{ nextEvent: Eve
       break;
     }
 
-    case Event.REGISTER_REV_LEGACY: {
+    case Event.REGISTER_LEGACY: {
       console.log("[mode]:legacy get")
-      await register_legacy(opt.legacy!);
-      nextState = Event.UNREGISTER_RELATION;
+      await registerLegacy(opt.legacy!);
+      next = Event.TRY_REL;
       await showcase()
       console.log(`===========================================`)
       break;
@@ -81,23 +80,23 @@ const chat = async (currentState: Event, opt: Options): Promise<{ nextEvent: Eve
 
     default:
       console.log("[mode]:nothing")
-      nextState = Event.NOTHING;
+      next = Event.NOTHING;
       console.log(`===========================================`)
       break;
   }
 
-  return { nextEvent: nextState, newOptions };
+  return { next: next, newOptions };
 };
 
 // --- 聊天服务类 ---
 class ChatService {
-  private currentState: Event = Event.INIT;
-  private currentOptions: Options = { legacy: [] };
+  private cur: Event = Event.INIT;
+  private curOpt: Options = { legacy: [] };
   private isRunning: boolean = false;
 
-  public async trigger(startState?: Event) {
-    if (startState) {
-      this.currentState = startState;
+  public async trigger(state?: Event) {
+    if (state) {
+      this.cur = state;
     }
     if (this.isRunning) return;
 
@@ -107,11 +106,11 @@ class ChatService {
   }
 
   private async run() {
-    while (this.currentState !== Event.NOTHING) {
-      const { nextEvent, newOptions } = await chat(this.currentState, this.currentOptions);
+    while (this.cur !== Event.NOTHING) {
+      const { next, newOptions } = await chat(this.cur, this.curOpt);
 
-      this.currentOptions = newOptions;
-      this.currentState = nextEvent;
+      this.curOpt = newOptions;
+      this.cur = next;
     }
   }
 }

@@ -1,24 +1,48 @@
-import {isParallelSymbol, Register} from "../utils";
-import {ContainerConfig, NodeConfig, RelationConfig} from "../types";
-import {Container} from "@/src/container/container";
-import {getSignAndVal, standardize} from "./utils";
-import {handleCreate} from "./handleCreate/handleCreate";
-import {recursiveParallelMapper} from "./parallelMapper/parallelMapper";
-import {handleCheck} from "./handleCheck/handleCheck";
+import {isParalHead, Register} from "../utils";
+import {Zip_C, Zip_N, Zip_R} from "../types";
+import {Container} from "@/src/Container";
+import {handleCreate} from "./handleCreate";
+import {RPM} from "./parallelMapper";
+import {handleCheck} from "./handleCheck";
 import {applyBatch} from "../decorator/applyBatch";
 import {debug} from "../decorator/debug";
-import {useDebug} from "../config";
-import {projectionDBHandler} from "../handleDB";
-import { next_tokens } from "@/src/Chat/TokenManager";
+import {useDebug} from "../globalConfig";
+import {handlerN, handlerP} from "../handleDB";
+import {next_tokens} from "@/src/Chat/TokenManager";
+import {handleSpeak} from "@/src/Node/handleSpeak";
+import {Regs} from "@/src/constants";
 
-const token_queue=next_tokens
+const token_queue = next_tokens
+
+/**
+ * @example
+ * input: node 100.content: [99] me
+ * node 99: {content:[98] hear}
+ * node 98: {content: [97] you}
+ * node 97:{content: can}
+ * expected output: can you hear me
+ */
+async function standardize(slice: string): Promise<string> {
+  const str = slice.split(" ")
+  const r = await Promise.all(str.map(async e => {
+    if (Regs.node.test(e)) {
+      const nodeId = +e.slice(1, -1)
+      return standardize((await handlerN.find(nodeId))!.val)
+    } else return e
+  }))
+  return r.join(" ")
+}
+const SignAndVal = (nodeVal: string) => {
+  const str = nodeVal.split(" ");
+  return {sign: str[0], NVP: str.slice(1)};
+}
 
 export class Node {
   static Pool: Node[] = []
 
   constructor(readonly key: number,
-              private readonly content: string,
-              private isActive: boolean = false) {
+              private readonly val: string,
+              private state: boolean = false) {
   }
 
 
@@ -32,75 +56,75 @@ export class Node {
     await Register<Node>(this, pool);
   }
 
-  zip(): NodeConfig {
-    return {key: this.key, content: this.content, isActive: this.isActive};
+  zip(): Zip_N {
+    return {k: this.key, val: this.val, state: this.state};
   }
 
   activate(): void {
-    this.isActive = true;
+    this.state = true;
   }
 
   deactivate(): void {
-    this.isActive = false;
+    this.state = false;
   }
 
   setState(val: boolean) {
-    this.isActive = val;
+    this.state = val;
   }
 
   executable(): boolean {
-    return this.isActive;
+    return this.state;
   }
 
   @debug(useDebug)
   async execute() {
-    const {sign, val} = getSignAndVal(this.content);
-    const nodeVal = val.join(" ")
+    const {sign, NVP} = SignAndVal(this.val);
+    const nv = NVP.join(" ")
     switch (sign) {
       case '[P]': {
         console.log("[P]:")
-        if (!this.isActive) return
-        const decorator_Fn = applyBatch()(handleCreate)
-        return await decorator_Fn(recursiveParallelMapper(nodeVal, []));
+        if (!this.state) return
+        const F = applyBatch()(handleCreate)
+        return await F(RPM(nv, []));
       }
       case '[check]': {
-        if(this.isActive) return
-        const res = await handleCheck(recursiveParallelMapper(nodeVal, [])[0])
+        if (this.state) return
+        const res = await handleCheck(RPM(nv, [])[0])
         if (res) {
           this.activate()
-          console.log(`node:${this.key} has been activated:`,this.isActive)
+          console.log(`node:${this.key} has been activated:`, this.state)
         }
         return;
       }
-      case '[say':{
-
+      case '[say]': {
+        handleSpeak(NVP.join(" "))
         return
       }
       case '[unknown]': {
         return
       }
-      default:{
-        if((await projectionDBHandler.queryProjectionByNodeId(this.key)).length>0) return;
-        const unknownDataInput=await this.read()
-        console.log("node without use:",this.key,this.content)
-            for (const token of unknownDataInput.split(" ")){
-              /**
-               * @[unknown] : separate from the normal token flow
-               */
-              token_queue.add(`[unknown] ${token}`)
-            }
+      default: {
+        if ((await handlerP.findByN(this.key)).length > 0) return;
+        const nvf = await this.read()
+        console.log("node without use:", this.key, this.val)
+        for (const token of nvf.split(" ")) {
+          /**
+           * @[unknown] : separate from the normal token flow
+           */
+          token_queue.add(`[unknown] ${token}`)
+        }
         return;
       }
     }
   }
 
-  async extractRelation(prevContainers: Container[]): Promise<RelationConfig[]> {
-    const relationIds = await projectionDBHandler.queryProjectionByNodeId(this.key)
-    return relationIds.filter(e=>e.nodetype==="trigger").map(e => ({
-      key: e.relation_id,
-      triggers: [],
-      results: [],
-      containers: prevContainers.length > 0 ? prevContainers : []
+  async extractR(prevC: Container[]): Promise<Zip_R[]> {
+    const id_Rs = await handlerP.findByN(this.key)
+    return id_Rs.filter(e => e.type === "trigger").map(e => ({
+      k: e.relation_id,
+      t: [],
+      r: [],
+      c: prevC.length > 0 ? prevC : []
     }))
   }
 
@@ -108,15 +132,15 @@ export class Node {
    * @Content: [0x01] : Hello World /
    * @private
    */
-  extractParallel(): ContainerConfig | undefined {
-    const str = this.content.split(" ");
-    const firstPart = str[0];
-    if (isParallelSymbol(firstPart) && str[1] === ":") {
-      return {key: firstPart, type: "parallel", content: str.slice(2).join(" "), name: firstPart};
+  extractP(): Zip_C | undefined {
+    const str = this.val.split(" ");
+    const head = str[0];
+    if (isParalHead(head) && str[1] === ":") {
+      return {k: head, type: "parallel", val: str.slice(2).join(" "), name: head};
     }
   }
 
   read() {
-    return standardize(this.content, []);
+    return standardize(this.val);
   }
 }
