@@ -29,3 +29,8 @@ boss : if I say : [GG] , it means I have spoken out your name .
 GG: how do I make a response to you ?
 boss: you can say : I am here , sir . to make a response to me
 `
+
+const md=`if someone says: “Excuse me, where is the bathroom?”,
+ then you have to smile and say: “It’s at the end of the hallway on the left”, and lead them there if they look confused`
+
+const correspondent_mt=`boss to [GG] : if someone says [any] , then you have to say [any]`
