@@ -1,64 +1,45 @@
 import {Node} from "@/src/Node";
-import {Container} from "@/src/container";
+import {Container} from "@/src/Container";
+
 export type NodeType = "trigger"|"result"
-export type ContainerType = "parallel"
-export type Transformer<T = any> = (prev: T, curr: T) => void
-export type Converter<T = any> = (item: T) => Promise<void>
-
-export interface NodeConfig {
-  key: number
-  content: string;
-  isActive: boolean;
+export type CType = "parallel"
+`============================================`
+export interface Zip_N {
+  k: number
+  val: string;
+  state: boolean;
 }
-
-export interface ContainerConfig {
-  key: string,
-  type: ContainerType,
-  content: string,
+export interface Zip_C {
+  k: string,
+  type: CType,
+  val: string,
   name: string
 }
-
-export interface RelationConfig {
-  key: number
-  triggers: Node[],
-  results: Node[],
-  containers: Container[],
+export interface Zip_R {
+  k: number
+  t: Node[],
+  r: Node[],
+  c: Container[],
 }
 
-export interface ContainerVariant {
-  rule: RegExp
-  containerType: ContainerType;
-}
-
-export interface NextLeap {
-  nextNodes: Node[],
-  containers: Container[],
-}
-
-export interface QueueFlow {
-  userStr: string[],
-  bingoStuff: NextLeap[],
-}
-
-
-export interface NodeDBConfig {
+`===============================================`
+export interface Row_N {
   id:number;
-  content: string;
+  val: string;
 }
-export interface RelationDBConfig{
+export interface Row_R {
   id:number;
 }
-export interface ProjectionDBConfig {
+export interface Row_P {
   id:number;
   relation_id:number;
   node_id:number;
-  nodetype:NodeType
+  type:NodeType
   created_at:any
 }
-export interface DBConfig{
-  user: string,
-  host: string,
-  database: string,
-  password: string,
-  port: number,
+export interface Row_I {
+  id:number,
+  k:string,
+  v:string,
+  created_at:any
 }
