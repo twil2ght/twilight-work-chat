@@ -1,0 +1,26 @@
+===========================================
+[chat->mode->DropRel]
+uuid:9-id:10 drop his legacy [
+  Node { key: 41, val: '[0x01] : //', state: false },
+  Node { key: 37, val: '[28] you', state: false }
+] [
+  Container {
+    id: '[0x01]',
+    name: '[0x01]',
+    type: 'parallel',
+    content: 'hello',
+    key: '[0x01]'
+  }
+]
+===========================================
+[chat->mode->DoLegacy]
+[Legacy From]: uuid:9-id:10
+all the ps: [
+  Container {
+    id: '[0x01]',
+    name: '[0x01]',
+    type: 'parallel',
+    content: 'hello you',
+    key: '[0x01]'
+  }
+]

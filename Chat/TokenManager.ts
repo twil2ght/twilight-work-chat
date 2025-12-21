@@ -1,12 +1,21 @@
 // TokenManager.ts
-class TokenManager {
+import {chatService} from "@/src/Chat/chat";
+
+export class TokenManager {
   private static nextTokens: string[];
   private static history: string[];
 
   static {
-    this.nextTokens = ["[start]","boss", "hi","[GG]"];
+    this.nextTokens = [];
     this.history = [];
-    console.log("[TokenManager] 静态初始化完成，nextTokens初始值：", this.nextTokens);
+  }
+
+  // 批量添加Token（支持单个/多个）
+  static addTokens(newTokens: string | string[]) {
+    const tokensToAdd = Array.isArray(newTokens) ? newTokens : [newTokens];
+    this.nextTokens.push(...tokensToAdd);
+    // 通知ChatService有新Token待处理（关键：不直接触发，只标记）
+    chatService.markPendingTokens();
   }
 
   static get(): string | undefined {
@@ -14,16 +23,11 @@ class TokenManager {
     return this.nextTokens[0];
   }
 
-  static add(token: string) {
-    if (!this.nextTokens) this.nextTokens = [];
-    this.nextTokens.push(token);
-  }
-
   static shift(): string | undefined {
     if (!this.nextTokens) this.nextTokens = [];
     const token = this.nextTokens.shift();
     if (token) {
-      console.log("[out]:", token);
+/*      console.log("[TokenManager->NextTokens->out]:", token);*/
       if (!this.history) this.history = [];
       this.history.push(token);
     }
@@ -31,7 +35,7 @@ class TokenManager {
   }
 
   static getLength(): number {
-    console.log("nextTokens：", this.nextTokens);
+    //console.log("[TokenManager->NextTokens]:", this.nextTokens);
 
 
     if (!this.nextTokens) this.nextTokens = [];
@@ -39,19 +43,16 @@ class TokenManager {
   }
 
   static getHistory(): string[] {
+   // console.log("[TokenManager->History]:",this.history)
     if (!this.history) this.history = [];
     return [...this.history];
   }
 }
 
-export const next_tokens = {
-  get: TokenManager.get.bind(TokenManager), // 绑定this
-  add: TokenManager.add.bind(TokenManager)  // 绑定this
-};
-
 // 核心修复：给每个方法绑定this到TokenManager
 export const TokenApi = {
   shift: TokenManager.shift.bind(TokenManager),
   getLength: TokenManager.getLength.bind(TokenManager), // 关键！绑定this
-  getHistory: TokenManager.getHistory.bind(TokenManager)
+  getHistory: TokenManager.getHistory.bind(TokenManager),
+  addToken: TokenManager.addTokens.bind(TokenManager),
 };

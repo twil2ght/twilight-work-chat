@@ -7,9 +7,9 @@ const pool = new Pool(dbConfig);
 export const runResetTest = async (): Promise<void> => {
   pool.query(SQL_RESET).then(()=>{});
 }
-//runResetTest().then(() => {});
+runResetTest().then(() => {});
 
 export const runInit = async (): Promise<void> => {
   pool.query(SQL_INIT).then(()=>{});
 }
-runInit().then(()=>{});
+//runInit().then(()=>{});

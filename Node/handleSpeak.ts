@@ -1,3 +1,3 @@
 export function handleSpeak(nv:string){
-  console.log(`✅[OUTPUT][${nv}]`);
+  console.debug(`\t\t✅ [SPEAK]:${nv}`);
 }

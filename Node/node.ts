@@ -1,18 +1,18 @@
-import {isParalHead, Register} from "../utils";
+import {isParalHead, log, Register} from "../utils";
 import {Zip_C, Zip_N, Zip_R} from "../types";
 import {Container} from "@/src/Container";
-import {handleCreate} from "./handleCreate";
 import {RPM} from "./parallelMapper";
 import {handleCheck} from "./handleCheck";
 import {applyBatch} from "../decorator/applyBatch";
-import {debug} from "../decorator/debug";
-import {useDebug} from "../globalConfig";
 import {handlerN, handlerP} from "../handleDB";
-import {next_tokens} from "@/src/Chat/TokenManager";
+import {TokenManager} from "@/src/Chat";
 import {handleSpeak} from "@/src/Node/handleSpeak";
 import {Regs} from "@/src/constants";
+import {guessDataV2} from "@/src/data/metaLoader";
+import {handleIdentity} from "@/src/Node/handleIdentity";
 
-const token_queue = next_tokens
+type Sign = '[P]' | '[check]' | '[say]' | '[unknown]' | '[Q]' | '[I]'
+const payloadArrow='->'
 
 /**
  * @example
@@ -22,19 +22,27 @@ const token_queue = next_tokens
  * node 97:{content: can}
  * expected output: can you hear me
  */
-async function standardize(slice: string): Promise<string> {
+async function nvToStr(slice: string): Promise<string> {
   const str = slice.split(" ")
   const r = await Promise.all(str.map(async e => {
     if (Regs.node.test(e)) {
       const nodeId = +e.slice(1, -1)
-      return standardize((await handlerN.find(nodeId))!.val)
+      return nvToStr((await handlerN.find(nodeId))!.content)
     } else return e
   }))
   return r.join(" ")
 }
-const SignAndVal = (nodeVal: string) => {
+
+
+export const SignAndVal = (nodeVal: string) => {
   const str = nodeVal.split(" ");
   return {sign: str[0], NVP: str.slice(1)};
+}
+
+export async function createNodesByVal(val:string[]){
+  let F=applyBatch()(handlerN.create.bind(handlerN))
+  let row=await F(val)
+  return row!.map(e=>new Node(e.id,e.content))
 }
 
 export class Node {
@@ -46,12 +54,17 @@ export class Node {
   }
 
 
-  @debug(useDebug)
+
   async register() {
-    await Register<Node>(this, Node.Pool);
+    return await Register<Node>(this, Node.Pool);
   }
 
-  @debug(useDebug)
+
+  async unregister() {
+    Node.Pool = Node.Pool.filter(e => e.key !== this.key);
+  }
+
+
   async registerTo(pool: Node[]) {
     await Register<Node>(this, pool);
   }
@@ -60,44 +73,77 @@ export class Node {
     return {k: this.key, val: this.val, state: this.state};
   }
 
-  activate(): void {
+  tryActivate(): void {
     this.state = true;
   }
-
-  deactivate(): void {
-    this.state = false;
-  }
-
-  setState(val: boolean) {
-    this.state = val;
+  setState(state:boolean){
+    this.state=state
   }
 
   executable(): boolean {
     return this.state;
   }
 
-  @debug(useDebug)
-  async execute() {
-    const {sign, NVP} = SignAndVal(this.val);
+
+  async execute(parallels: Container[] = [], strict: Sign | Sign[] | undefined = undefined) {
+    let {sign, NVP} = SignAndVal(this.val);
+    const speakInfo=SignAndVal(this.val.split(payloadArrow).slice(-1)[0].trim())
+
+    if(sign!=='[P]' && speakInfo.sign==='[say]' && speakInfo.NVP[0]==='[GG]') {
+      sign='[say]'
+      let valStartPos=speakInfo.NVP.indexOf(":")
+      NVP=speakInfo.NVP.slice(valStartPos+1)
+    }
     const nv = NVP.join(" ")
+    if (strict !== undefined) {
+      sign =sign as Sign
+      if(Array.isArray(strict)){
+        if( strict.indexOf(sign as Sign)===-1) return
+      }else{
+        if (sign !== strict) return
+      }
+    }
     switch (sign) {
       case '[P]': {
-        console.log("[P]:")
         if (!this.state) return
-        const F = applyBatch()(handleCreate)
-        return await F(RPM(nv, []));
+        const F = applyBatch(1)(guessDataV2)
+        let res = RPM(nv, parallels)
+        if (typeof (res) !== 'boolean') {
+          log.success("\t\t[Node->P]:", ...res)
+          await F(undefined, res);
+          return
+        }
+        log.gray("\t\t[Node->P]:",nv)
+        return
       }
       case '[check]': {
-        if (this.state) return
-        const res = await handleCheck(RPM(nv, [])[0])
-        if (res) {
-          this.activate()
-          console.log(`node:${this.key} has been activated:`, this.state)
+        let m = RPM(nv, parallels)
+        if (typeof (m) !== 'boolean') {
+          const res = await handleCheck(m[0])
+          if (res) {
+            this.setState(true)
+            log.success("\t\t[Node->Check]:", this.key+'-'+this.val)
+          }else{
+            this.setState(false)
+            log.gray("\t\t[Node->Check]:", this.key+'-'+this.val)
+          }
         }
         return;
       }
-      case '[say]': {
-        handleSpeak(NVP.join(" "))
+      case '[Q]': {
+        return
+      }
+      case '[say]':{
+        if(speakInfo.NVP[0]!=='[GG]') return
+        let m=RPM(nv,parallels);
+        if (typeof (m) !== 'boolean') handleSpeak(m[0])
+        return
+      }
+        /**
+         * [IS] [ISB] [IN]
+         */
+      case '[I]':{
+        await handleIdentity(nv)
         return
       }
       case '[unknown]': {
@@ -105,22 +151,27 @@ export class Node {
       }
       default: {
         if ((await handlerP.findByN(this.key)).length > 0) return;
-        const nvf = await this.read()
-        console.log("node without use:", this.key, this.val)
-        for (const token of nvf.split(" ")) {
-          /**
-           * @[unknown] : separate from the normal token flow
-           */
-          token_queue.add(`[unknown] ${token}`)
+        let rpm=RPM(this.val,parallels)
+        if (typeof (rpm)!=='boolean'){
+          if(rpm[0]!==this.val){
+            return rpm
+          }
         }
+        const nvf = await this.read()
+        console.log("unknown node:", this.val)
+        TokenManager.addTokens(['[unknown]',...nvf.split(" ")])
         return;
       }
     }
   }
 
-  async extractR(prevC: Container[]): Promise<Zip_R[]> {
+  async extractR(prevC: Container[]): Promise<Zip_R[] | undefined> {
+    const str = this.val.split(" ");
+    const head = str[0];
+    if (isParalHead(head) && str[1] === ":") return
     const id_Rs = await handlerP.findByN(this.key)
-    return id_Rs.filter(e => e.type === "trigger").map(e => ({
+    //console.log("[Node->extractR:",id_Rs)
+    return id_Rs.filter(e => e.nodetype === "trigger").map(e => ({
       k: e.relation_id,
       t: [],
       r: [],
@@ -135,12 +186,16 @@ export class Node {
   extractP(): Zip_C | undefined {
     const str = this.val.split(" ");
     const head = str[0];
+    const isNext = str[2] === "[next]"
+    //because the token which triggered the current node has been shifted by the Function: (tryRs),
+    //and we have to get it back to change the "[next]" in [0x01] : [next] to the valid value
+    const val = isNext ? TokenManager.get() : str.slice(2).join(" ")
     if (isParalHead(head) && str[1] === ":") {
-      return {k: head, type: "parallel", val: str.slice(2).join(" "), name: head};
+      return {k: head, val: val!};
     }
   }
 
   read() {
-    return standardize(this.val);
+    return nvToStr(this.val);
   }
 }

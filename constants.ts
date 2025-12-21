@@ -1,19 +1,16 @@
-import {CType} from "@/src/types";
 
 interface CVarirant {
   rule: RegExp
-  cType: CType;
 }
 
 export const Regs = {
-  parallel: /^\[(0x\d+)]$/,
+  parallel: /^\[0x[a-zA-Z0-9-]+]$/,
   node: /^\[(\d+)]$/
 }
 
 export const CReg: CVarirant[] = [
   {
     rule: Regs.parallel,
-    cType: "parallel",
   }
 ]
 export const SIGN_P = "|"

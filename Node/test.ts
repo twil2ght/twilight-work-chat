@@ -16,7 +16,7 @@ async function runtest(){
   /**
    * CASE 2 : [P]
    */
-  nodeIns2.activate()
+  nodeIns2.tryActivate()
   await nodeIns2.execute().then(()=>{})
 }
 runtest().catch(()=>{})

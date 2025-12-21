@@ -21,7 +21,6 @@ export function applyBatch<Index extends number>(dependentArgIdx?: Index) {
           return
         }
         if (Array.isArray(param)) {
-          console.log(`trying to apply batches...`);
           const raw = await Promise.all(
               param.map(async (item: any, idx: number) =>
                   Fn.apply(this, args.map((arg, i) => i === paramIdx ? item : arg))

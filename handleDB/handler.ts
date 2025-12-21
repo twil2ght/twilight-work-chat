@@ -1,6 +1,6 @@
 import {Pool} from 'pg';
 import {LogPrintDBClass} from "../decorator/logPrintDB";
-import {SQL_I, SQL_N, SQL_P, SQL_R} from "./sql";
+import {SQL_N, SQL_P, SQL_R} from "./sql";
 import {useDbLog} from "@/src/globalConfig";
 import type {NodeType, Row_I, Row_N, Row_P, Row_R} from "../types";
 import {dbConfig} from "./DBconfig";
@@ -89,25 +89,33 @@ export class RelationDBHandler {
 
 @LogPrintDBClass<DataTypeI>(useDbLog)
 export class IdentityDBHandler {
-  constructor() {
-  }
+  constructor(private readonly SQL_I: {
+    CREATE: string;
+    DELETE: string;
+    FIND:
+        {
+          BY_K: string;
+          BY_V: string;
+          BY_KV: string;
+        };
+    }) {}
 
   async create(k: string, v: string): Promise<DataTypeI | undefined> {
-    return await run<DataTypeI>(SQL_I.CREATE, [k, v])
+    return await run<DataTypeI>(this.SQL_I.CREATE, [k, v])
   }
 
   async delete(id: number): Promise<DataTypeI | undefined> {
-    return await run<DataTypeI>(SQL_I.DELETE, [id])
+    return await run<DataTypeI>(this.SQL_I.DELETE, [id])
   }
 
   async findByK(k: string): Promise<DataTypeI[]> {
-    return await runA<DataTypeI>(SQL_I.FIND.BY_K, [k])
+    return await runA<DataTypeI>(this.SQL_I.FIND.BY_K, [k])
   }
 
   async findByV(v: string): Promise<DataTypeI[]> {
-    return await runA<DataTypeI>(SQL_I.FIND.BY_V, [v])
+    return await runA<DataTypeI>(this.SQL_I.FIND.BY_V, [v])
   }
   async findByKV(k:string,v:string): Promise<DataTypeI | undefined> {
-    return await run<DataTypeI>(SQL_I.FIND.BY_KV, [k, v])
+    return await run<DataTypeI>(this.SQL_I.FIND.BY_KV, [k, v])
   }
 }

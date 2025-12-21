@@ -5,6 +5,6 @@ import {Node} from '../../Node'
  */
 export async function tryNs(){
   await Promise.all(Node.Pool.map(async n=>{
-    await n.execute()
+    await n.execute([],'[check]')
   }))
 }

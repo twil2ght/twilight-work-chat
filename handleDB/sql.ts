@@ -49,7 +49,7 @@ export const SQL_P = {
   CREATE: `WITH ins AS (
       INSERT INTO projection (relation_id, node_id, nodeType)
           VALUES ($1, $2, $3)
-          ON CONFLICT (relation_id, node_id) DO NOTHING
+          ON CONFLICT (relation_id, node_id, nodetype) DO NOTHING
           RETURNING *)
            -- 优先返回插入结果（有则是新数据），无则查现有数据
            SELECT *
@@ -120,6 +120,41 @@ export const SQL_I = {
         WHERE k = $1 AND v = $2;`
   }
 }
+export const SQL_IN = {
+  CREATE: `WITH ins AS (
+      INSERT INTO identityN (k, v)
+          VALUES ($1, $2)
+          ON CONFLICT (k, v) DO NOTHING
+          RETURNING *)
+           -- 优先返回插入结果（有则是新数据），无则查现有数据
+           SELECT *
+           FROM ins
+           UNION ALL
+           SELECT *
+           FROM identityN
+           WHERE k = $1
+             AND v = $2
+           LIMIT 1;`,  // LIMIT 1 确保仅返回1行（插入/查询二选一）
+
+  DELETE: `DELETE
+           FROM identityN
+           WHERE id = $1
+           RETURNING *;`,
+  FIND: {
+    BY_V: `
+        SELECT *
+        FROM identityN
+        WHERE v = $1;`,
+    BY_K: `
+        SELECT *
+        FROM identityN
+        WHERE k = $1;`,
+    BY_KV: `
+        SELECT *
+        FROM identityN
+        WHERE k = $1 AND v = $2;`
+  }
+}
 export const SQL_INIT = `
     CREATE TABLE IF NOT EXISTS nodes
     (
@@ -147,7 +182,7 @@ export const SQL_INIT = `
         node_id     INTEGER        NOT NULL,
         nodeType    node_type_enum NOT NULL,
         created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        UNIQUE (relation_id, node_id),
+        UNIQUE (relation_id, node_id,nodeType),
         FOREIGN KEY (relation_id) REFERENCES relations (id) ON DELETE CASCADE,
         FOREIGN KEY (node_id) REFERENCES nodes (id) ON DELETE CASCADE
 
@@ -159,11 +194,20 @@ export const SQL_INIT = `
         v          TEXT NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
+    CREATE TABLE IF NOT EXISTS identityN
+    (
+        id         SERIAL PRIMARY KEY,
+        k          TEXT NOT NULL,
+        v          TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
     CREATE INDEX IF NOT EXISTS idx_node_content ON nodes (content);
     CREATE INDEX IF NOT EXISTS idx_map_relation ON projection (relation_id);
     CREATE INDEX IF NOT EXISTS idx_map_node ON projection (node_id);
     CREATE INDEX IF NOT EXISTS idx_map_k ON identity (k);
     CREATE INDEX IF NOT EXISTS idx_map_v ON identity (v);
+    CREATE INDEX IF NOT EXISTS idx_map_k_N ON identityN (k);
+    CREATE INDEX IF NOT EXISTS idx_map_v_N ON identityN (v);
 `
 export const SQL_RESET = `
     TRUNCATE TABLE projection, relations, nodes CASCADE;
