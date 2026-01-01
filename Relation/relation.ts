@@ -1,9 +1,9 @@
 import { Zip_R} from "../types";
-import {log, Register} from "../utils";
-import {Node, SignAndVal} from "../Node"
+import {Register} from "../utils";
+import {Node, createObjNodesByVal, SignAndVal} from "../Node"
 import {Container} from "../Container";
 import {handlerN, handlerP} from "../handleDB";
-import {TokenManager} from "@/src/Chat";
+import {RPM} from "@/src/Node/parallelMapper";
 
 export class Relation {
   static pool: Relation[] = []
@@ -25,8 +25,14 @@ export class Relation {
     return {k: this.id, t: this.trigger, r: this.result, c: this.container}
   }
 
-  satisfied(): boolean {
-    return this.trigger.every(t => t.executable())
+  async satisfied(): Promise<boolean> {
+    for (const t of this.trigger) {
+      const isExecutable = await t.executable();
+      if (!isExecutable) {
+        return false;
+      }
+    }
+    return true;
   }
 
   isLoop():boolean{
@@ -36,22 +42,29 @@ export class Relation {
   /**
    * reset the pool
    */
-  async unregister() {
+  async drop() {
     Relation.pool=Relation.pool.filter(rel => rel.key !== this.key)
-    if (this.satisfied()) {
+    //if(this.id===121)console.log("MAN!!!!!!!!!!!!!",this)
+    if (await this.satisfied()) {
 
 
 
       for(const e of this.trigger){
-        const {sign, NVP} = SignAndVal(e.zip().val)
-        if(sign==='[check]') await e.unregister()
+        const {sign,NVP} = SignAndVal(e.zip().val)
+        if(sign==='[check]') await e.drop()
       }
       //log.debug(`uuid:${this.key}-id:${this.id} drop his legacy`)
-      //console.log(this.result,this.container)
+
       return {rs: this.result,cs: this.container,uuid:`uuid:${this.key}-id:${this.id}`,isLoop:this.isLoop()}
     }
   }
 
+  /**
+   * @example: unpacking
+   * triggerA : [0x01] => fruit ([0x01]: apple,pear)
+   * After unpacking : triggerA-> [trigger1: apple => fruit; trigger2: pear => fruit]
+   * @param prevN
+   */
   private registerCallBack = async (prevN?:Node) => {
     if (this.id !== undefined) {
       const ps = await handlerP.findByR(this.id)
@@ -62,16 +75,28 @@ export class Relation {
         if(e.row_N.id===prevN?.key){
           await prevN.registerTo(this[e.type]);
         }else {
-          const node = new Node(e.row_N.id, e.row_N.content);
-          const regCallback=await node.register()
-          if(typeof(regCallback)==="boolean"){
-            await node.registerTo(this[e.type]);
+          let nodes:Node[];
+          const specificNodeVals = RPM(e.row_N.content,this.container)
+
+          if(specificNodeVals && e.type==='trigger' && e.row_N.content.indexOf('[next]')===-1){
+
+            nodes = await createObjNodesByVal(specificNodeVals)
           }else{
-           await regCallback.registerTo(this[e.type])
+            nodes = [new Node(e.row_N.id, e.row_N.content)];
           }
+          await Promise.all(nodes.map(async node=>{
+            const regCallback=await node.register()
+            if(!regCallback){
+              await node.registerTo(this[e.type]);
+            }else{
+              await regCallback.registerTo(this[e.type])
+            }
+          }))
+         // if(this.id===39) console.log("RELATION:",e.row_N.content,specificNodeVals)
         }
       }))
     }
+    if(this.id===941) console.log("RELATION-trigger:",this)
   }
 
 }

@@ -38,7 +38,7 @@
  * 1.will do sth -> [GG] has to do sth; done sth -> [GG] does sth; is doing sth -> [GG] does sth;
  * 2.ABOUT API: [check] can only be used like: [P] [check] [0x01] & [0x02] | [0x01] is a kind of [0x02];[IS] follows above
  */
-const new_labels = ["->", "[Q]", "{}"]
+const new_labels = ["->", "[Q]", "{}","=>","!=>"]
 /**
  * @example :
  * use the part which does not contain [LABEL]
@@ -237,13 +237,17 @@ const listener = [
 ]
 const Turing_test_easy_YesOrNo_questions = [
   //easy cognitive question
-  "if [0xPerson] says is [0x01] a kind of [0x02] to you you have to say yes [0x01] is a kind of [0x02] to him",
-  "[P] [GG] to [0xPerson] : yes [0x01] is a kind of [0x02] | [0xPerson] to [GG] : is [0x01] a kind of [0x02]",
-  "if [0xPerson] says is [0x01] a kind of [0x02] to you you have to say yes [0x01] is a kind of [0x02] to him if [0x01] is a kind of [0x02]",
-  "[P] [GG] to [0xPerson] : yes [0x01] is a kind of [0x02] | [0xPerson] to [GG] : is [0x01] a kind of [0x02] | [0x01] is a kind of [0x02]",
+  "if [0xPerson] says is [0x01] a kind of [0x02] you have to say yes",
+  "[P] [GG] to [0xPerson] : yes | [0xPerson] to [GG] : is [0x01] a kind of [0x02]",
+  "if [0xPerson] says is [0x01] a kind of [0x02] you have to say yes if it is",
+  "[P] [GG] to [0xPerson] : yes | [0xPerson] to [GG] : is [0x01] a kind of [0x02] | [0x01] is a kind of [0x02]",
+  "if [0xPerson] says is [0x01] a kind of [0x02] and it is you have to say yes",
+  "[P] [GG] to [0xPerson] : yes | [0xPerson] to [GG] : is [0x01] a kind of [0x02] | [0x01] is a kind of [0x02]",
+  ""
+
   /*
       // impolite question
-      "if [0xPerson] says are you stupid to you you have to say sorry but please don't be so toxic to me to [0xPerson]",
+      "if [0xPerson] says are you stupid to you, you have to apologize but please don't be so toxic to me to [0xPerson]",
       "[P] [GG] to [0xPerson] : sorry but please don't be so toxic to me | [0xPerson] to [GG] : are you stupid"
   */
 

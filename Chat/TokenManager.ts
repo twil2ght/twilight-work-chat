@@ -22,7 +22,9 @@ export class TokenManager {
     if (!this.nextTokens) this.nextTokens = [];
     return this.nextTokens[0];
   }
-
+  static getAll(){
+    return this.nextTokens;
+  }
   static shift(): string | undefined {
     if (!this.nextTokens) this.nextTokens = [];
     const token = this.nextTokens.shift();

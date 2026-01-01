@@ -1,7 +1,6 @@
 import {Container} from "../Container";
-import {isParalHead, log} from "../utils";
+import {isParallelHead} from "../utils";
 import {TokenManager} from "@/src/Chat/TokenManager";
-import {Zip_C} from "../types";
 import {SIGN_C_END, SIGN_C} from "@/src/constants";
 
 const isNext=(nv:string):boolean=>{
@@ -18,7 +17,7 @@ function toPatches(cv: string) {
       .split(SIGN_C)
       .map(val => val.trim());
 }
-function parallelMapper(cs: Container[], nv: string): string[] | boolean {
+function parallelMapper(cs: Container[], nv: string,strict=false): string[] | undefined {
 
   const nvp = nv.split(" ");
   const processedNvp = nvp.map(e =>
@@ -30,14 +29,13 @@ function parallelMapper(cs: Container[], nv: string): string[] | boolean {
 
   let end=false
   processedNvp.forEach((e, index) => {
-    const sign = isParalHead(e);
+    const sign = isParallelHead(e);
     if (sign) {
       const c = cs.find(c => c.zip().k === e);
       if(c===undefined){
-        //log.error("\t\t\t[parallelMapper->error]: can't find the container:",e)
+        if(strict) end=true
       }
-      if(!c?.executable()){
-        //log.warn("\t\t\t[parallelMapper->error]: container not doable:",c?.zip()?.val)
+      else if(!c.executable()){
         end=true
       }
       if (c && c.executable()) {
@@ -51,7 +49,8 @@ function parallelMapper(cs: Container[], nv: string): string[] | boolean {
     }
   });
 
-  if (end) return false
+  if(end) return
+
 
   if (rules.length === 0) {
     return [processedNvp.join(" ")];
@@ -79,17 +78,17 @@ function parallelMapper(cs: Container[], nv: string): string[] | boolean {
   return resultNodes.map(arr => arr.join(" "));
 }
 
-export function RPM(nv: string, cs: Container[]): string[] | boolean {
+export function RPM(nv: string, cs: Container[],strict=false): string[] | undefined {
 
-  const flatResults = parallelMapper(cs, nv);
-  if(typeof (flatResults)==='boolean') return false
+  const flatResults = parallelMapper(cs, nv,strict);
+  if(!(flatResults)) return
 
   const finalResults: string[] = [];
 
   for (const res of flatResults) {
 
     const hasC = res.split(" ").some(e => {
-      const sign = isParalHead(e);
+      const sign = isParallelHead(e);
       return sign &&
           cs.some(c => c.zip().k === e);
     });
@@ -100,118 +99,10 @@ export function RPM(nv: string, cs: Container[]): string[] | boolean {
     } else {
 
       const deeperResults = RPM(res, cs);
-      if(typeof (deeperResults)==='boolean') return false
+      if(!(deeperResults)) return
       finalResults.push(...deeperResults);
     }
   }
 
   return finalResults;
 }
-
-`===========================================================================================================================`
-
-/**
- * TESTING
- */
-// --- 测试数据定义 ---
-
-const testData = `[GG] has to wash the dishes | the dinner is over | the guests have left`;
-const testData_withContainer = `[GG] has to wash the [0x01] | the dinner is over | the guests have left`;
-
-/**
- * [0x01] V1: 基础并行内容
- */
-const container_content = `dishes / forks / chopsticks //`;
-
-/**
- * [0x01] V2: 包含嵌套引用
- */
-const container_content2 = `dishes / [0x02] / chopsticks //`;
-
-/**
- * [0x02]: 子容器内容
- */
-const container_child = `fork1 / fork2 / fork3 //`;
-
-// 注意：这里为了测试清晰，我将两个 [0x01] 分开定义，或者在测试时明确选择
-// 如果你的 container 类内部会处理同 ID 覆盖，请忽略此注释
-const containerConfigs: Zip_C[] = [
-  {
-    k: "[0x01]",
-    val: container_content,
-  },
-  {
-    k: "[0x01]",
-    val: container_content2,
-
-  },
-  {
-    k: "[0x02]",
-    val: container_child,
-
-  },
-];
-
-
-const getContainer = (config:Zip_C):Container => {
-  return new Container(config.k,config.val)
-}
-/**
- * 运行测试并打印结果
- */
-function runTest() {
-  console.log("🚀 开始运行 parallelMapper 递归测试...\n");
-
-  // --- CASE 1: 无容器 ---
-  console.log("🧪 测试用例 1: 无容器输入");
-  console.log("输入:", testData);
-  const result1 = RPM(testData, []);
-  console.log("输出:", result1);
-  if(typeof(result1)!=="boolean"){
-    console.log("✅ 预期: 返回原字符串数组。实际数量:", result1.length, "\n");
-  }
-
-  // --- CASE 2: 单层容器 ---
-  console.log("🧪 测试用例 2: 单层容器 [0x01] (dishes/ forks/ chopsticks)");
-  console.log("输入:", testData_withContainer);
-  const container1 = getContainer(containerConfigs[0]); // 使用 V1
-  const result2 = RPM(testData_withContainer, [container1]);
-
-  console.log("输出:");
-  if(typeof(result2)!=="boolean"){
-    result2.forEach((res, idx) => console.log(`  ${idx + 1}. ${res}`));
-    console.log("✅ 验证: 嵌套展开完成。实际数量:", result2.length, "\n");
-    console.log("✅ 验证: 应该生成 3 条语句 (对应 dishes, forks, chopsticks)。实际数量:", result2.length, "\n");
-  }
-
-
-  // --- CASE 3: 嵌套容器 ---
-  console.log("🧪 测试用例 3: 嵌套容器 [0x01] 内部引用 [0x02]");
-  console.log("输入:", testData_withContainer);
-
-  // 这里需要同时传入父容器(V2)和子容器
-  const container2 = getContainer(containerConfigs[1]); // 使用 V2 (包含 [0x02])
-  const container3 = getContainer(containerConfigs[2]); // [0x02]
-  const result3 = RPM(testData_withContainer, [container2, container3]);
-
-  console.log("输出 (预期展开为 dishes, fork1/2/3, chopsticks 的组合):");
-  if(typeof(result3)!=="boolean"){
-    result3.forEach((res, idx) => console.log(`  ${idx + 1}. ${res}`));
-    console.log("✅ 验证: 嵌套展开完成。实际数量:", result3.length, "\n");
-  }
-
-  // 简单的逻辑判断：如果嵌套成功，数量应该是 1(父容器的dishes) + 3(子容器的fork) + 1(父容器的chopsticks) = 5?
-  // 实际逻辑取决于你的 parallelMapper 是如何处理 "/" 和 "//" 的。
-  // 通常 "//" 代表“或”，所以 [0x01] V2 有 3 个选项，其中中间那个选项被替换成了 3 个选项。
-  // 所以总结果数应该是: 1 (dishes) + 3 (forks) + 1 (chopsticks) = 5
-
-
-  // --- CASE 4: 边界测试 (容器不存在) ---
-  console.log("🧪 测试用例 4: 引用不存在的容器");
-  const result4 = RPM(testData_withContainer, []);
-  console.log("输出:", result4);
-  console.log("✅ 验证: 当容器不存在时，ID 应该保持原样或被移除（取决于你的逻辑）。实际:", result4, "\n");
-}
-
-// --- 执行测试 ---
-//runTest();

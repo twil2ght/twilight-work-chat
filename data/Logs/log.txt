@@ -1,26 +1,1724 @@
-===========================================
-[chat->mode->DropRel]
-uuid:9-id:10 drop his legacy [
-  Node { key: 41, val: '[0x01] : //', state: false },
-  Node { key: 37, val: '[28] you', state: false }
-] [
-  Container {
-    id: '[0x01]',
-    name: '[0x01]',
-    type: 'parallel',
-    content: 'hello',
-    key: '[0x01]'
-  }
+"C:\Program Files\nodejs\node.exe" --import file:/D:/WebStorm%202025.3.1/plugins/nodeJS/js/ts-file-loader/node_modules/tsx/dist/loader.cjs D:\JetbrainsProjects\twilight-work-chat\src\Chat\index.ts
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & if
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'if' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] if
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'if' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] if
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'if' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & I
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'I' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [22] I
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[22]', 'I' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [22] I
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[22]', 'I' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & say
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'say' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [26] say
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[26]', 'say' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [26] say
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[26]', 'say' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [30] [0x9-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[30]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x9-0] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [30] [0x9-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[30]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [30] [0x9-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[30]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x9-0] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [30] [0x9-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[30]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'you' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [34] you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[34]', 'you' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x9-0] : //
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '//' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [34] you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[34]', 'you' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & have
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'have' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [43] have
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[43]', 'have' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [43] have
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[43]', 'have' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [48] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[48]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [48] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[48]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & say
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'say' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [52] say
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[52]', 'say' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [52] say
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[52]', 'say' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [56] [0x15-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[56]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x15-1] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [56] [0x15-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[56]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [56] [0x15-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[56]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x15-1] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [56] [0x15-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[56]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [P] [say] boss to [GG] : [0x9-0] -> [say] [GG] to boss : [0x15-1] | [say] boss to [GG] : [0x9-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[P]',     '[say]',   'boss',
+  'to',      '[GG]',    ':',
+  '[SIGN0]', '->',      '[say]',
+  '[GG]',    'to',      'boss',
+  ':',       '[SIGN1]', '|',
+  '[say]',   'boss',    'to',
+  '[GG]',    ':',       '[SIGN0]'
 ]
-===========================================
-[chat->mode->DoLegacy]
-[Legacy From]: uuid:9-id:10
-all the ps: [
-  Container {
-    id: '[0x01]',
-    name: '[0x01]',
-    type: 'parallel',
-    content: 'hello you',
-    key: '[0x01]'
-  }
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x6-0] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] [0x6-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] [0x6-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x6-0] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] [0x6-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] [0x6-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [104] is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[104]', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x6-0] : //
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '//' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [104] is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[104]', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & a
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'a' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [113] a
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[113]', 'a' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [113] a
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[113]', 'a' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & kind
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'kind' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [118] kind
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[118]', 'kind' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & of
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'of' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [118] kind
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[118]', 'kind' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [122] of
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[122]', 'of' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [122] of
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[122]', 'of' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [126] [0x26-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[126]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x26-1] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [126] [0x26-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[126]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [126] [0x26-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[126]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x26-1] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [126] [0x26-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[126]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : [0x6-0] is a kind of [0x26-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]',   'boss',
+  'to',      '[GG]',
+  ':',       '[SIGN0]',
+  'is',      'a',
+  'kind',    'of',
+  '[SIGN1]'
 ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : [0x6-0] is a kind of [0x26-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]',   'boss',
+  'to',      '[GG]',
+  ':',       '[SIGN0]',
+  'is',      'a',
+  'kind',    'of',
+  '[SIGN1]'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : [0x6-0] is a kind of [0x26-1] -> [I] [0x6-0] & [0x26-1] & S
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]',   'boss',    'to',
+  '[GG]',    ':',       '[SIGN0]',
+  'is',      'a',       'kind',
+  'of',      '[SIGN1]', '->',
+  '[I]',     '[SIGN0]', '&',
+  '[SIGN1]', '&',       'S'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [173] [0x32-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[173]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x32-0] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [173] [0x32-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[173]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [173] [0x32-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[173]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x32-0] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [173] [0x32-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[173]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & a
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'a' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x32-0] : //
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '//' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [177] a
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[177]', 'a' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [177] a
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[177]', 'a' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & kind
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'kind' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [186] kind
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[186]', 'kind' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [186] kind
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[186]', 'kind' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & of
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'of' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [191] of
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[191]', 'of' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [191] of
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[191]', 'of' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x37-1] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [195] [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[195]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [195] [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[195]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [195] [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[195]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x37-1] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [195] [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[195]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : is [0x32-0] a kind of [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]',   'boss',
+  'to',      '[GG]',
+  ':',       'is',
+  '[SIGN0]', 'a',
+  'kind',    'of',
+  '[SIGN1]'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : is [0x32-0] a kind of [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]',   'boss',
+  'to',      '[GG]',
+  ':',       'is',
+  '[SIGN0]', 'a',
+  'kind',    'of',
+  '[SIGN1]'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [IFlow] [0x32-0] => [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] [GG] to boss : yes it is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', '[GG]',
+  'to',    'boss',
+  ':',     'yes',
+  'it',    'is'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [IFlow] [0x380-0] => [0x380-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x380-0] is a kind of [0x380-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', 'is', 'a', 'kind', 'of', '[SIGN1]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [173] [0x32-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[173]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x32-0] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [173] [0x32-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[173]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [173] [0x32-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[173]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x32-0] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [173] [0x32-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[173]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & a
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'a' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x32-0] : //
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '//' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [177] a
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[177]', 'a' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [177] a
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[177]', 'a' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & kind
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'kind' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [186] kind
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[186]', 'kind' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & of
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'of' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [186] kind
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[186]', 'kind' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [191] of
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[191]', 'of' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [191] of
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[191]', 'of' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x37-1] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [195] [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[195]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [195] [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[195]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [195] [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[195]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x37-1] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [195] [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[195]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : is [0x32-0] a kind of [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]',   'boss',
+  'to',      '[GG]',
+  ':',       'is',
+  '[SIGN0]', 'a',
+  'kind',    'of',
+  '[SIGN1]'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : is [0x32-0] a kind of [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]',   'boss',
+  'to',      '[GG]',
+  ':',       'is',
+  '[SIGN0]', 'a',
+  'kind',    'of',
+  '[SIGN1]'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [0x32-0] & [0x37-1] & [I]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[SIGN0]', '&', '[SIGN1]', '&', '[I]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] [GG] to boss : yes it is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', '[GG]',
+  'to',    'boss',
+  ':',     'yes',
+  'it',    'is'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [173] [0x32-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[173]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x32-0] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [173] [0x32-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[173]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [173] [0x32-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[173]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x32-0] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & a
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'a' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [173] [0x32-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[173]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [177] a
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[177]', 'a' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x32-0] : //
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '//' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & kind
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'kind' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [177] a
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[177]', 'a' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [186] kind
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[186]', 'kind' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [186] kind
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[186]', 'kind' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & of
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'of' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [191] of
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[191]', 'of' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [191] of
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[191]', 'of' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x37-1] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [195] [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[195]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [195] [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[195]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [195] [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[195]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x37-1] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [195] [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[195]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : is [0x32-0] a kind of [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]',   'boss',
+  'to',      '[GG]',
+  ':',       'is',
+  '[SIGN0]', 'a',
+  'kind',    'of',
+  '[SIGN1]'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : is [0x32-0] a kind of [0x37-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]',   'boss',
+  'to',      '[GG]',
+  ':',       'is',
+  '[SIGN0]', 'a',
+  'kind',    'of',
+  '[SIGN1]'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [0x32-0] & [0x37-1] & [UNK]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[SIGN0]', '&', '[SIGN1]', '&', '[UNK]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] [GG] to boss : i don't know
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', '[GG]',
+  'to',    'boss',
+  ':',     'i',
+  "don't", 'know'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & if
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'if' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] if
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'if' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] if
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'if' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & I
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'I' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [22] I
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[22]', 'I' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [22] I
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[22]', 'I' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & say
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'say' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [26] say
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[26]', 'say' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [26] say
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[26]', 'say' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [30] is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[30]', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [30] is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[30]', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x49-0] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [397] [0x49-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[397]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [397] [0x49-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[397]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [397] [0x49-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[397]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x49-0] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [397] [0x49-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[397]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & a
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'a' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [401] a
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[401]', 'a' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x49-0] : //
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '//' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [401] a
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[401]', 'a' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & kind
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'kind' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [410] kind
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[410]', 'kind' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [410] kind
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[410]', 'kind' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & of
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'of' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [415] of
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[415]', 'of' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [415] of
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[415]', 'of' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [419] [0x54-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[419]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x54-1] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [419] [0x54-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[419]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [419] [0x54-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[419]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x54-1] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [419] [0x54-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[419]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & that
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'that' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x54-1] : //
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '//' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [423] that
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[423]', 'that' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [423] that
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[423]', 'that' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & means
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'means' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [432] means
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[432]', 'means' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [432] means
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[432]', 'means' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [437] [0x49-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[437]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x49-0] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [437] [0x49-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[437]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x49-0] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [437] [0x49-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[437]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [437] [0x49-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[437]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & and
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'and' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [441] and
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[441]', 'and' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x49-0] : //
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '//' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [441] and
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[441]', 'and' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x54-1] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [450] [0x54-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[450]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [450] [0x54-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[450]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [450] [0x54-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[450]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x54-1] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [450] [0x54-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[450]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x54-1] : //
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '//' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [455] is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[455]', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [455] is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[455]', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & mentioned
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'mentioned' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [464] mentioned
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[464]', 'mentioned' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & in
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'in' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [464] mentioned
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[464]', 'mentioned' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [469] in
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[469]', 'in' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [469] in
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[469]', 'in' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & our
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'our' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [473] our
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[473]', 'our' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [473] our
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[473]', 'our' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & talk
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'talk' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [477] talk
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[477]', 'talk' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [477] talk
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[477]', 'talk' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [P] [0x49-0] is mentioned in boss 's and [GG] 's talk | [say] boss to [GG] : is [0x49-0] a kind of [0x54-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[P]',       '[SIGN0]', 'is',
+  'mentioned', 'in',      'boss',
+  "'s",        'and',     '[GG]',
+  "'s",        'talk',    '|',
+  '[say]',     'boss',    'to',
+  '[GG]',      ':',       'is',
+  '[SIGN0]',   'a',       'kind',
+  'of',        '[SIGN1]'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [P] [0x54-1] is mentioned in boss 's and [GG] 's talk | [say] boss to [GG] : is [0x49-0] a kind of [0x54-1]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[P]',       '[SIGN0]', 'is',
+  'mentioned', 'in',      'boss',
+  "'s",        'and',     '[GG]',
+  "'s",        'talk',    '|',
+  '[say]',     'boss',    'to',
+  '[GG]',      ':',       'is',
+  '[SIGN1]',   'a',       'kind',
+  'of',        '[SIGN0]'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & if
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'if' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] if
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'if' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] if
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'if' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & a
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'a' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [22] a
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[22]', 'a' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [22] a
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[22]', 'a' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & kind
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'kind' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2447] kind
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2447]', 'kind' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2447] kind
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2447]', 'kind' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & of
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'of' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2451] of
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2451]', 'of' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2451] of
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2451]', 'of' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2455] [0x154-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2455]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x154-0] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2455] [0x154-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2455]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2455] [0x154-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2455]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x154-0] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2455] [0x154-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2455]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x154-0] : //
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '//' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2459] is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2459]', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2459] is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2459]', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & mentioned
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'mentioned' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2468] mentioned
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2468]', 'mentioned' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2468] mentioned
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2468]', 'mentioned' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & in
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'in' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2473] in
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2473]', 'in' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2473] in
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2473]', 'in' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & our
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'our' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2477] our
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2477]', 'our' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2477] our
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2477]', 'our' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & talk
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'talk' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2481] talk
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2481]', 'talk' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2481] talk
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2481]', 'talk' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'you' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2485] you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2485]', 'you' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2485] you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2485]', 'you' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & can
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'can' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2489] can
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2489]', 'can' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & say
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'say' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2489] can
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2489]', 'can' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2493] say
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2493]', 'say' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & more
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'more' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2493] say
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2493]', 'say' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2497] more
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2497]', 'more' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2497] more
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2497]', 'more' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & about
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'about' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2501] about
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2501]', 'about' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2501] about
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2501]', 'about' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & the
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'the' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2505] the
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2505]', 'the' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2505] the
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2505]', 'the' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x154-0] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2509] [0x154-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2509]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2509] [0x154-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2509]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [any]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[any]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2509] [0x154-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2509]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x154-0] : [next]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '[next]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2509] [0x154-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2509]', '[SIGN0]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2513] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2513]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [0x154-0] : //
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[SIGN0]', ':', '//' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2513] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2513]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & me
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'me' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2522] me
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2522]', 'me' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2522] me
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2522]', 'me' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [P] [GG] has to say more about [0x388-0] to boss | [0x388-0] is mentioned in boss 's and [GG] 's talk | [0x388-0] => [0x154-0]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[P]',     '[GG]',      'has',
+  'to',      'say',       'more',
+  'about',   '[SIGN0]',   'to',
+  'boss',    '|',         '[SIGN0]',
+  'is',      'mentioned', 'in',
+  'boss',    "'s",        'and',
+  '[GG]',    "'s",        'talk',
+  '|',       '[SIGN0]',   '=>',
+  '[SIGN1]'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+                [Node->P]: [say] boss to [GG] : hello -> [say] [GG] to boss : hello | [say] boss to [GG] : hello
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & hello
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'hello' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] hello
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'hello' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] hello
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'hello' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : hello
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]', 'boss', 'to', '[GG]', ':', 'hello' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : hello
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]', 'boss', 'to', '[GG]', ':', 'hello' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : hello -> [say] [GG] to boss : hello
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', 'boss',  'to',
+  '[GG]',  ':',     'hello',
+  '->',    '[say]', '[GG]',
+  'to',    'boss',  ':',
+  'hello'
+]
+                [Node->P]: [say] boss to [GG] : hello -> [say] [GG] to boss : hello | [say] boss to [GG] : hello
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & hello
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'hello' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] hello
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'hello' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] hello
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'hello' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : hello
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]', 'boss', 'to', '[GG]', ':', 'hello' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : hello
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]', 'boss', 'to', '[GG]', ':', 'hello' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : hello -> [say] [GG] to boss : hello
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', 'boss',  'to',
+  '[GG]',  ':',     'hello',
+  '->',    '[say]', '[GG]',
+  'to',    'boss',  ':',
+  'hello'
+]
+                [Node->P]: [say] boss to [GG] : hello -> [say] [GG] to boss : hello | [say] boss to [GG] : hello
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & hello
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'hello' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] hello
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'hello' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] hello
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'hello' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : hello
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]', 'boss', 'to', '[GG]', ':', 'hello' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : hello
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]', 'boss', 'to', '[GG]', ':', 'hello' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : hello -> [say] [GG] to boss : hello
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', 'boss',  'to',
+  '[GG]',  ':',     'hello',
+  '->',    '[say]', '[GG]',
+  'to',    'boss',  ':',
+  'hello'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+                [Node->P]: [say] boss to [GG] : how are you -> [say] [GG] to boss : I am fine | [say] boss to [GG] : how are you
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & how
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'how' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] how
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'how' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & are
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'are' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] how
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'how' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [639] are
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[639]', 'are' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'you' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [639] are
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[639]', 'are' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [643] you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[643]', 'you' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [643] you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[643]', 'you' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : how are you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', 'boss',
+  'to',    '[GG]',
+  ':',     'how',
+  'are',   'you'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : how are you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', 'boss',
+  'to',    '[GG]',
+  ':',     'how',
+  'are',   'you'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : how are you -> [say] [GG] to boss : I am fine
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', 'boss', 'to',
+  '[GG]',  ':',    'how',
+  'are',   'you',  '->',
+  '[say]', '[GG]', 'to',
+  'boss',  ':',    'I',
+  'am',    'fine'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+                [Node->P]: [say] boss to [GG] : good bye -> [say] [GG] to boss : good bye | [say] boss to [GG] : good bye
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & good
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'good' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] good
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'good' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] good
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'good' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & bye
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'bye' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [684] bye
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[684]', 'bye' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [684] bye
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[684]', 'bye' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : good bye
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', 'boss',
+  'to',    '[GG]',
+  ':',     'good',
+  'bye'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : good bye
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', 'boss',
+  'to',    '[GG]',
+  ':',     'good',
+  'bye'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : good bye -> [say] [GG] to boss : good bye
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', 'boss', 'to',
+  '[GG]',  ':',    'good',
+  'bye',   '->',   '[say]',
+  '[GG]',  'to',   'boss',
+  ':',     'good', 'bye'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+                [Node->P]: [say] boss to [GG] : nice to meet you -> [say] [GG] to boss : nice to meet you | [say] boss to [GG] : nice to meet you
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & nice
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'nice' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] nice
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'nice' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] nice
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'nice' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [724] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[724]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & meet
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'meet' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [724] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[724]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [728] meet
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[728]', 'meet' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'you' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [728] meet
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[728]', 'meet' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [732] you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[732]', 'you' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [732] you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[732]', 'you' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : nice to meet you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', 'boss',
+  'to',    '[GG]',
+  ':',     'nice',
+  'to',    'meet',
+  'you'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : nice to meet you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', 'boss',
+  'to',    '[GG]',
+  ':',     'nice',
+  'to',    'meet',
+  'you'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : nice to meet you -> [say] [GG] to boss : nice to meet you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', 'boss',  'to',
+  '[GG]',  ':',     'nice',
+  'to',    'meet',  'you',
+  '->',    '[say]', '[GG]',
+  'to',    'boss',  ':',
+  'nice',  'to',    'meet',
+  'you'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+                [Node->P]: [say] boss to [GG] : what is your name -> [say] [GG] to boss : my name is GoldenGlow | [say] boss to [GG] : what is your name
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & what
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'what' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] what
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'what' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] what
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'what' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [774] is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[774]', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & your
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'your' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [774] is
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[774]', 'is' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [778] your
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[778]', 'your' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [778] your
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[778]', 'your' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & name
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'name' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [782] name
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[782]', 'name' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [782] name
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[782]', 'name' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : what is your name
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', 'boss',
+  'to',    '[GG]',
+  ':',     'what',
+  'is',    'your',
+  'name'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : what is your name
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', 'boss',
+  'to',    '[GG]',
+  ':',     'what',
+  'is',    'your',
+  'name'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : what is your name -> [say] [GG] to boss : my name is GoldenGlow
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]',      'boss',
+  'to',         '[GG]',
+  ':',          'what',
+  'is',         'your',
+  'name',       '->',
+  '[say]',      '[GG]',
+  'to',         'boss',
+  ':',          'my',
+  'name',       'is',
+  'GoldenGlow'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+                [Node->P]: [say] boss to [GG] : can you speak english -> [say] [GG] to boss : yes i can | [say] boss to [GG] : can you speak english
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & can
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'can' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] can
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'can' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] can
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'can' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'you' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [824] you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[824]', 'you' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & speak
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'speak' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [824] you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[824]', 'you' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [828] speak
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[828]', 'speak' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [828] speak
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[828]', 'speak' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & english
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'english' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [832] english
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[832]', 'english' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [832] english
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[832]', 'english' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : can you speak english
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]',   'boss',
+  'to',      '[GG]',
+  ':',       'can',
+  'you',     'speak',
+  'english'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : can you speak english
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]',   'boss',
+  'to',      '[GG]',
+  ':',       'can',
+  'you',     'speak',
+  'english'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : can you speak english -> [say] [GG] to boss : yes i can
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', 'boss',  'to',
+  '[GG]',  ':',     'can',
+  'you',   'speak', 'english',
+  '->',    '[say]', '[GG]',
+  'to',    'boss',  ':',
+  'yes',   'i',     'can'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+                [Node->P]: [say] boss to [GG] : thank you -> [say] [GG] to boss : you are welcome | [say] boss to [GG] : thank you
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & thank
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'thank' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] thank
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'thank' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] thank
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'thank' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'you' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [874] you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[874]', 'you' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [874] you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[874]', 'you' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : thank you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', 'boss',
+  'to',    '[GG]',
+  ':',     'thank',
+  'you'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : thank you
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]', 'boss',
+  'to',    '[GG]',
+  ':',     'thank',
+  'you'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : thank you -> [say] [GG] to boss : you are welcome
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]',   'boss', 'to',
+  '[GG]',    ':',    'thank',
+  'you',     '->',   '[say]',
+  '[GG]',    'to',   'boss',
+  ':',       'you',  'are',
+  'welcome'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+                [Node->P]: [say] boss to [GG] : sorry -> [say] [GG] to boss : it does not matter | [say] boss to [GG] : sorry
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [2] boss
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[2]', 'boss' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [6] to
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[6]', 'to' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [10] [GG]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[10]', '[GG]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & sorry
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', 'sorry' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [14] :
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[14]', ':' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] sorry
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'sorry' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [18] sorry
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[18]', 'sorry' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : sorry
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]', 'boss', 'to', '[GG]', ':', 'sorry' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : sorry
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]', 'boss', 'to', '[GG]', ':', 'sorry' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say] boss to [GG] : sorry -> [say] [GG] to boss : it does not matter
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [
+  '[say]',  'boss',  'to',
+  '[GG]',   ':',     'sorry',
+  '->',     '[say]', '[GG]',
+  'to',     'boss',  ':',
+  'it',     'does',  'not',
+  'matter'
+]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+                ✅ [SPEAK]:I am fine
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+                ✅ [SPEAK]:hello
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+                ✅ [SPEAK]:good bye
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+                ✅ [SPEAK]:my name is GoldenGlow
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+                ✅ [SPEAK]:yes i can
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+                ✅ [SPEAK]:you are welcome
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+                ✅ [SPEAK]:it does not matter
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+                ℹ️ inserting new Identity:
+                ✅ [Node->I]: apple belongs to fruit
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+                ✅ [SPEAK]:yes it is
+                ✅ [SPEAK]:yes it is
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [check] [next] & [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[check]', '[next]', '&', '[say]' ]
+copy: [IFlow] [0x32-0] => [0x37-1] [say]
+copy: [ '[IFlow]', '[SIGN0]', '=>', '[SIGN1]' ] [ '[say]' ]
+                ✅ [SPEAK]:i don't know
+
+进程已结束，退出代码为 0
+
+

@@ -1,10 +1,11 @@
 import {Pool} from 'pg';
 import {LogPrintDBClass} from "../decorator/logPrintDB";
 import {SQL_N, SQL_P, SQL_R} from "./sql";
-import {useDbLog} from "@/src/globalConfig";
+
 import type {NodeType, Row_I, Row_N, Row_P, Row_R} from "../types";
 import {dbConfig} from "./DBconfig";
 
+const useDbLog=false
 
 type DataTypeN = Row_N;
 type DataTypeP = Row_P
@@ -32,6 +33,10 @@ export class NodeDBHandler {
 
   async find(id: number): Promise<DataTypeN | undefined> {
     return await run<DataTypeN>(SQL_N.FIND, [id])
+  }
+
+  async findAll():Promise<DataTypeN[]>{
+    return await runA<DataTypeN>(SQL_N.ALL,[])
   }
 
   async findByVal(nv: string): Promise<DataTypeN | undefined> {
@@ -97,6 +102,7 @@ export class IdentityDBHandler {
           BY_K: string;
           BY_V: string;
           BY_KV: string;
+          ALL:string;
         };
     }) {}
 
@@ -117,5 +123,8 @@ export class IdentityDBHandler {
   }
   async findByKV(k:string,v:string): Promise<DataTypeI | undefined> {
     return await run<DataTypeI>(this.SQL_I.FIND.BY_KV, [k, v])
+  }
+  async findAll():Promise<DataTypeI[]>{
+    return await runA<DataTypeI>(this.SQL_I.FIND.ALL,[])
   }
 }

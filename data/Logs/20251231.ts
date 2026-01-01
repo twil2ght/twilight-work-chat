@@ -1,11 +1,13 @@
 `
 1.write code : [say]
 2.if [GG] made mistakes , tell her
-3.sometimes you need to get containers' id from the subNode rather than the current node
+4.if ([I] key & val) is to complicated, maybe you can learn some nodes to turn it to some small pieces
+属性的添加也可以进行学习而不是直接添加一个长度惊人的KV对
 `;
 
 
 `
+
 2.
 [say] boss to [GG] : how are you
 [say] boss to [GG] : how are you -> [say] [GG] to boss : i am fine if you feel good

@@ -13,7 +13,7 @@ const dropIsolatedCheckNodes=()=>{
 
 export async function tryRs():Promise<Legacy[]>{
   const rs = await Promise.all(Relation.pool.map(r=>{
-    return r.unregister()
+    return r.drop()
   }))
   dropIsolatedCheckNodes()
   return rs.filter(e=>e!==undefined)

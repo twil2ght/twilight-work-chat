@@ -1,44 +1,95 @@
-import {CReg} from "@/src/constants";
-import {Relation} from "./Relation";
-import {Node} from "@/src/Node";
+import {Regs, SIGN_C_END} from "@/src/constants";
 import {handlerN} from "@/src/handleDB";
 
-export function isParalHead(nv: string): boolean {
-  return CReg[0].rule.test(nv)
+export function isParallelHead(str: string): boolean {
+  return Regs.parallel.test(str)
 }
-
-export async function strToNv(str:string,print:boolean=false){
+export const isNodeHead=(str:string)=>{
+  return Regs.node.test(str)
+}
+export const isIGet=(str:string)=>{
+  return Regs.iGet.test(str)
+}
+export const isIGetContainer=(nvp:string[])=>{
+  return isIGet(nvp[2]) && nvp[3]===SIGN_C_END
+}
+export const getBracketVal=(str:string)=>{
+  return str.slice(1,str.length-1)
+}
+export async function strToNv(str:string,print:boolean=false,strict=true){
   let targetedN;
-  const H="boss to [GG] :"
   let S=str.split(" ")
-  if(S.indexOf(":")!==3){
-    S=(H+" "+str).split(" ")
-  }
   let prevNId="";
   for (const e of S){
-    const N=await handlerN.create(prevNId+e)
+    const N=strict?await handlerN.findByVal(prevNId+e):await handlerN.create(prevNId+e)
+    console.assert(!!N,"[Utils->strToNV]: failed")
     targetedN=N
     if(print)console.log(`[utils->strToNv]:${N?.content}`)
     prevNId=`[${N!.id}] `
   }
+
   //console.log(`[utils->strToNv](Final):${targetedN?.content}`)
   return targetedN
+}
+/**
+ * 分割字符串：仅分割花括号外部的空格，保留花括号内部的空格
+ * @param str 包含花括号和空格的目标字符串
+ * @returns 分割后的字符串数组
+ */
+export function splitIgnoreBraceSpace(str: string): string[] {
+  const result: string[] = [];
+  let currentSegment = '';
+  let braceCount = 0; // 花括号计数器：0=外部，>0=内部
+
+  // 遍历每个字符
+  for (const char of str) {
+    // 处理花括号，更新计数器
+    if (char === '{') {
+      braceCount++;
+      currentSegment += char;
+    } else if (char === '}') {
+      // 防止计数器为负数（处理不闭合的花括号）
+      braceCount = Math.max(0, braceCount - 1);
+      currentSegment += char;
+    }
+    // 处理空格：仅在花括号外部时分割
+    else if (char === ' ' && braceCount === 0) {
+      // 跳过连续的空格（避免空字符串元素）
+      if (currentSegment) {
+        result.push(currentSegment);
+        currentSegment = '';
+      }
+    }
+    // 其他字符：直接追加到当前片段
+    else {
+      currentSegment += char;
+    }
+  }
+
+  // 把最后一个非空片段加入结果
+  if (currentSegment) {
+    result.push(currentSegment);
+  }
+
+  return result;
 }
 
 export async function Register<T extends {
   key: string | number,
-}>(item: T, itemPool: T[], callback?: any,repeatable:boolean=false): Promise<boolean | T> {
+}>(item: T, itemPool: T[], callback?: any,repeatable:boolean=false): Promise<undefined | T> {
   if(repeatable) {
     itemPool.push(item);
-    return true;
+    return
   }
   let exist: T | undefined = itemPool.find(e => e.key === item.key)
   if (callback) await callback(item);
+
   if (exist) {
     return exist
   }else{
+    //if(item.key===1049) console.log("what can i say",item)
     itemPool.push(item)
-    return true
+    return
   }
 }
 
@@ -55,44 +106,7 @@ export async function Update<T extends {
   return false;
 }
 
-async function showNode(n:Node){
-  console.log(`\tID:${n.zip().k} | Val:${n.zip().val} | State:${n.zip().state}`)
-}
 
-
-/**
- * # Relation(out):
- * Relation(new):
- * Relation(all now):
- */
-export async function showcase():Promise<void>{
-  /**
-   * Relation(id):
-   *    triggers:
-   *    results:
-   *    containers:
-   */
-/*  for (const e of Relation.pool){
-    const key=e.zip().k
-    const t=e.zip().t
-    const r=e.zip().r
-    const c=e.zip().c
-    console.log(`Relation(${key},${e.key}):`)
-    console.log(`\tT:`)
-    t.forEach(e=>showNode(e))
-    console.log(``)
-    console.log(`\tR:`)
-    r.forEach(e=>showNode(e))
-    console.log(``)
-    console.log(`\tC:`)
-    c.forEach(e=>{
-      console.log(`\tID:${e.zip().k} | Val:${e.zip().val}`)
-    })
-  }*/
-  console.groupCollapsed(Relation.pool)
-}
-// utils/colorLog.ts
-// Node.js终端颜色码（前端浏览器可忽略，只适用于Node环境）
 export const Color = {
   // 字体颜色
   red: "\x1b[31m",    // 错误/异常

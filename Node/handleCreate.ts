@@ -1,21 +1,15 @@
 import {SIGN_P} from "@/src/constants";
 import {handlerN, handlerP, handlerR} from "../handleDB";
-import {Row_N} from "../types";
+import {NodeType, Row_N} from "../types";
 import {applyBatch} from "../decorator/applyBatch";
+import {parseParallel} from "@/src/Chat/module/register_legacy";
 
-/**
- *
- * @param rv
- * @param tv
- * @param rel_Id 用于增量添加
- * @param print
- */
-export async function createGrid(rv: string[], tv: string[] ,rel_Id:number | undefined=undefined,print:boolean=false): Promise<number> {
+interface RES_CG{
+  rel_id:number
+  failed:boolean
+}
 
-  let [t, r]: [Row_N[], Row_N[]] = [[], []]
-  const F = applyBatch()(handlerN.create.bind(handlerN));
-  t = (await F(tv))!; // 先获取 t
-  r = (await F(rv))!; // 再获取 r
+const deduplicateByKey=async(t:Row_N[],r:Row_N[])=>{
   const tIDs = t.map(e => e.id).filter(id => !!id); // 过滤空id，去重
   const rIDs = r.map(e => e.id).filter(id => !!id);
   const relArray_t:number[][]=await Promise.all(tIDs.map(async e=>{
@@ -24,9 +18,7 @@ export async function createGrid(rv: string[], tv: string[] ,rel_Id:number | und
   const relArray_r:number[][] = await Promise.all(rIDs.map(async e=>{
     return (await handlerP.findByN(e)).filter(a=>a.nodetype==='result').map(s=>s.relation_id as number)
   }))
-  //console.log(`=================================================`)
-  //console.log("relArray_t:",relArray_t)
-  //console.log("relArray_r:",relArray_r)
+
   let candidate=[...relArray_r[0]]
 
   for(const e of relArray_r){
@@ -35,18 +27,65 @@ export async function createGrid(rv: string[], tv: string[] ,rel_Id:number | und
   for(const e of relArray_t){
     candidate=candidate.filter(l=>e.indexOf(l)!==-1)
   }
-  if(print){
-    console.log("existed relation:",candidate)
-    console.log("T:",tv)
-    console.log("R:",rv)
+  return candidate
+}
+function findCommonElements<T>(...arrays: T[][]): T[] {
+  if (arrays.length === 0 || arrays[0].length === 0) return [];
 
+  let commonSet = new Set(arrays[0]);
+
+  for (let i = 1; i < arrays.length; i++) {
+    const currentArr = arrays[i];
+    const currentSet = new Set(currentArr);
+    commonSet = new Set([...commonSet].filter(item => currentSet.has(item)));
+    if (commonSet.size === 0) break;
   }
-  if(candidate.length>0) return candidate[0]
+
+  return [...commonSet];
+}
+const getSimNRelIDs=async(n:string,mode:NodeType)=>{
+  let rows = await handlerN.findAll()
+  let nodeVals = rows.filter(e =>{
+    return (parseParallel(e.content) === parseParallel(n))
+  })
+  let rel_ids:number[]=[]
+  await Promise.all(nodeVals.map(async m=>{
+    let projections = await handlerP.findByN(m.id)
+    projections=projections.filter(p=>p.nodetype===mode)
+    rel_ids=[...rel_ids,...projections.map(p=>p.relation_id)]
+  }))
+  return rel_ids
+}
+
+const deduplicateByVal=async(t:string[],r:string[])=>{
+  const relBatch=[
+      ...await Promise.all(t.map(n=>getSimNRelIDs(n,'trigger'))),
+      ...await Promise.all(r.map(n=>getSimNRelIDs(n,'result')))
+  ]
+  return findCommonElements(...relBatch)
+}
+
+/**
+ *
+ * @param rv
+ * @param tv
+ * @param rel_Id 用于增量添加
+ */
+export async function createGrid(rv: string[], tv: string[] ,rel_Id:number | undefined=undefined): Promise<RES_CG> {
+/*  console.log("tv:",tv)
+  console.log("rv:",rv)*/
+  const c_val=await deduplicateByVal(tv, rv)
+  if(c_val.length>0) return {rel_id:c_val[0],failed:true}
+  const F = applyBatch()(handlerN.create.bind(handlerN));
+  const t = (await F(tv))!; // 先获取 t
+  const r = (await F(rv))!; // 再获取 r
+  const candidate=await deduplicateByKey(t, r)
+  if(candidate.length>0) return {rel_id:candidate[0],failed:true}
   const RID=rel_Id!==undefined?rel_Id:(await handlerR.create())!.id
 
   await Promise.all([...t.map(e => handlerP.create(RID, e.id, "trigger")), ...r.map(e => handlerP.create(RID, e.id, "result"))])
 
-  return RID
+  return {rel_id: RID,failed:false}
 }
 
 async function clearGrid(id: number) {
@@ -67,11 +106,9 @@ export const classifyNV = (patches: string[]): [string, string[]] => {
 }
 
 
-export async function handleCreate(nv: string,print:boolean=false): Promise<number> {
+export async function handleCreate(nv: string): Promise<RES_CG> {
   const [r, t] = classifyNV(NVP_P(nv));
-/*  console.log("\t\tr:",r)
-  console.log("\t\tt",t)*/
-  return await createGrid([r], t,undefined,print)
+  return await createGrid([r], t,undefined)
 }
 
 `==============================================================`
