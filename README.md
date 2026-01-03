@@ -1,1 +1,1 @@
-# an old fashion chatting machine
+# an old-fashioned chat machine
